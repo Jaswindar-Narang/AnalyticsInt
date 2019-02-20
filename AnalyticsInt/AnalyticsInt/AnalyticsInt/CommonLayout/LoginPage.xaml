@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AnalyticsInt.CommonLayout.LoginPage" BackgroundColor="White">
+    <ScrollView>
+    <Grid BackgroundColor="White">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <BoxView x:Name="Errormsg" IsVisible="false" Grid.Row="0"   BackgroundColor="Red"  WidthRequest="300"    HeightRequest="50" VerticalOptions="CenterAndExpand" HorizontalOptions="FillAndExpand" ></BoxView>
+
+        <Label x:Name="lbl_Errormsg" IsVisible="false" Grid.Row="0" FontSize="Medium"  TextColor="White" VerticalOptions="CenterAndExpand" HorizontalOptions="FillAndExpand" ></Label>
+
+        <Grid Grid.Row="1" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" Padding="30,30,30,30">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="100"></RowDefinition>
+                <RowDefinition Height="50"></RowDefinition>
+                <RowDefinition Height="65"></RowDefinition>
+                <RowDefinition Height="50"></RowDefinition>
+                <RowDefinition Height="50"></RowDefinition>
+                <RowDefinition Height="50"></RowDefinition>
+            </Grid.RowDefinitions>
+
+
+                <Image Grid.Row="0"  Source="avatar.png" Margin="0,0,0,0" HeightRequest="200" WidthRequest="200"></Image>
+
+        <Entry x:Name="txt_email" Grid.Row="1"  Placeholder="E-Mail" TextColor="Black">
+        </Entry>
+        <Image x:Name="emailSuccessImage" Grid.Row="1" IsVisible="false"  VerticalOptions="Center" HorizontalOptions="Start"/>
+        <Entry x:Name="txt_pass" Grid.Row="2"   Margin="0,15,0,0" Placeholder="Password" IsPassword="True" TextColor="Black">
+        </Entry>
+        <Image x:Name="PasswordSuccesImage" Grid.Row="2" Source="error.png" IsVisible="false"  VerticalOptions="Center" HorizontalOptions="Start"/>
+
+        <Button x:Name="btn_forget"  Grid.Row="3" FontSize="Medium" Clicked="btn_forget_Clicked"  Text="Forgot Password?" BackgroundColor="Transparent" HorizontalOptions="Center" VerticalOptions="Center"></Button>
+        <Button x:Name="login_img" Grid.Row="4"  Text="Login"  Clicked="login_img_Clicked"  TextColor="White" BorderRadius="25" BackgroundColor="Blue"  HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" HeightRequest="60" WidthRequest="170"></Button>
+        <Button x:Name="SignUp_img" Grid.Row="5"  Text="Register"  Clicked="SignUp_img_Clicked"  TextColor="White" BorderRadius="25" BackgroundColor="Green"  HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" HeightRequest="60" WidthRequest="170"></Button>
+    </Grid>
+        </Grid>
+    </ScrollView>
+</ContentPage>

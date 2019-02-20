@@ -1,0 +1,3 @@
+﻿<?xml version="1.0"?>
+<bitmap android:src="@drawable/splash" xmlns:android="http://schemas.android.com/apk/res/android"/>
+<!-- android:gravity="center" -->

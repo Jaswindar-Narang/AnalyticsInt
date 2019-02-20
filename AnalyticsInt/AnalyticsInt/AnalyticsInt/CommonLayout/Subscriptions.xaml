@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AnalyticsInt.CommonLayout.Subscriptions"
+             Title="Subscriptions">
+    <ContentPage.Content>
+        <Grid  VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" x:Name="GridSubscriptions">
+            <Grid.RowDefinitions>
+              
+                <RowDefinition Height="50"></RowDefinition>
+                <RowDefinition Height="70"></RowDefinition>
+               
+                <RowDefinition Height="70"></RowDefinition>
+                <RowDefinition Height="70"></RowDefinition>
+
+            </Grid.RowDefinitions>
+            
+           
+            
+                <Label Text="Select Your Subscription" FontAttributes="Bold" ></Label>
+                <Image  x:Name=" Trial_img"  Grid.Row="1" BackgroundColor="White"  Aspect="AspectFill"   Source="Trial.png">
+                <Image.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped" >
+                        
+                    </TapGestureRecognizer>
+                </Image.GestureRecognizers>
+                </Image>
+                
+            <Image  x:Name=" Weekly_img"  Grid.Row="2" BackgroundColor="White"  Aspect="AspectFill"   Source="Weekly.png"></Image>
+            <Image  x:Name=" Monthly_img"  Grid.Row="3" BackgroundColor="White"  Aspect="AspectFill"   Source="Monthly.png"></Image>
+            <Image  x:Name=" Annually_img"  Grid.Row="4" BackgroundColor="White"  Aspect="AspectFill"   Source="Annually.png"></Image>
+                <!--<Image Grid.Row="1" x:Name="img_TrialSubs" Source="Trail.jpg"  Aspect="AspectFill"></Image>-->
+          
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

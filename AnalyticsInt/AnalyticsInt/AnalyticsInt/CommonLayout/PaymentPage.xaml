@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AnalyticsInt.CommonLayout.PaymentPage"
+             Title="Subscribe">
+    <Grid x:Name="paymentGrid"  Padding="30,30,30,30">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="60"></RowDefinition>
+            <RowDefinition Height="100"></RowDefinition>
+            <RowDefinition Height="100"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Label Grid.Row="0" Text="Select Payment Option" TextColor="Black" FontAttributes="Bold"  VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand"></Label>
+        <Image Grid.Row="1" x:Name="Profileimg" Source="Selfpay.PNG"  Aspect="AspectFill"></Image>
+        <Image Grid.Row="2" x:Name="img_throughComapny"  Source="Company.PNG"  Aspect="AspectFill" ></Image>
+
+        <ActivityIndicator x:Name="indicator" Grid.Row="0" Grid.RowSpan="3"  VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand"  Color="SkyBlue"  IsEnabled ="False" IsRunning="False" IsVisible="False"></ActivityIndicator>
+
+        <StackLayout x:Name="Popup_grid" Grid.Row="0" BackgroundColor="WhiteSmoke"  Grid.RowSpan="4" WidthRequest="250" IsVisible="false" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand">
+            <Image Source="error.png" Margin="0,10,10,0" HorizontalOptions="End" VerticalOptions="End" HeightRequest="25" WidthRequest="25">
+                <Image.GestureRecognizers>
+                    <TapGestureRecognizer NumberOfTapsRequired="1" ></TapGestureRecognizer>
+                </Image.GestureRecognizers>
+            </Image>
+            <Label Text="Enter Coupon Code" Margin="0,0,0,10" TextColor="Black" FontAttributes="Bold" HorizontalOptions="Center" VerticalOptions="Center" ></Label>
+            <!--<control:CustomEntry x:Name="txt_coupon" Margin="10,0,10,0" HeightRequest="50" Placeholder="Enter Coupon code" TextColor="Black"></control:CustomEntry>-->
+            <!--<control:RoundButton Text="Submit" Margin="10,0,10,10" BorderRadius="10" Clicked="btn_Submit_Clicked" TextColor="White" BackgroundColor="#32AEE2"></control:RoundButton>-->
+
+        </StackLayout>
+
+    </Grid>
+</ContentPage>
