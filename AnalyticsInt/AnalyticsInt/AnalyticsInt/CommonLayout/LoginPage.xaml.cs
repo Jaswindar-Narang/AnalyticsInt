@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AnalyticsInt.Classes;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -14,6 +15,7 @@ namespace AnalyticsInt.CommonLayout
 	public partial class LoginPage : ContentPage
 	{
         NavigationPage nav = new NavigationPage();
+        FlightService flightApis = new FlightService();
 		public LoginPage ()
 		{
 			InitializeComponent ();
@@ -21,9 +23,14 @@ namespace AnalyticsInt.CommonLayout
 
         private void btn_forget_Clicked(object sender, EventArgs e)
         {
+            myAPICALL();
+            //var newres= await Task.Run(()=> flightApis.getFlightsFromAirport("SYD", 04, 03, 2019)));
 
         }
-
+        public async void myAPICALL()
+        {
+            var flightforAirport = await flightApis.getFlightsFromAirport("SYD", 14, 03, 2019);
+        }
         private void login_img_Clicked(object sender, EventArgs e)
         {
             LoginViewModel LoginVM = new LoginViewModel();

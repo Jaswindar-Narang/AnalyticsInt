@@ -13,8 +13,8 @@ namespace AnalyticsInt
         {
             InitializeComponent();
             NavigationPage nav = new NavigationPage();
-          //  MainPage = new LoginPage();
-            MainPage = new Subscriptions();
+            MainPage = new AirportFlights();
+            //MainPage = new Subscriptions();
                        MessagingCenter.Subscribe<LoginViewModel, string>(this, "LoginSuccess", (loginModel, args) =>
             {
                
