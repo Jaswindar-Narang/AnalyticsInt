@@ -1,0 +1,1812 @@
+{
+  "statusCode": 200,
+  "errorMessage": null,
+  "result": {
+    "request": {
+      "airport": {
+        "requestedCode": "SYD",
+        "fsCode": "SYD"
+      },
+      "codeType": {},
+      "departing": false,
+      "date": {
+        "year": "2019",
+        "month": "3",
+        "day": "12",
+        "interpreted": "2019-03-12"
+      },
+      "hourOfDay": {
+        "requested": "22",
+        "interpreted": 22
+      },
+      "url": "https://api.flightstats.com/flex/schedules/rest/v1/json/to/SYD/arriving/2019/3/12/22"
+    },
+    "scheduledFlights": [
+      {
+        "carrierFsCode": "VA",
+        "flightNumber": "562",
+        "departureAirportFsCode": "PER",
+        "arrivalAirportFsCode": "SYD",
+        "stops": 0,
+        "departureTerminal": "1",
+        "arrivalTerminal": "2",
+        "departureTime": "2019-03-12T15:20:00",
+        "arrivalTime": "2019-03-12T22:35:00",
+        "flightEquipmentIataCode": "73H",
+        "isCodeshare": false,
+        "isWetlease": false,
+        "serviceType": "J",
+        "serviceClasses": [
+          "J",
+          "Y"
+        ],
+        "trafficRestrictions": [],
+        "codeshares": [
+          {
+            "carrierFsCode": "AC",
+            "flightNumber": "2736",
+            "serviceType": "J",
+            "serviceClasses": [
+              "F",
+              "J",
+              "Y"
+            ],
+            "trafficRestrictions": [
+              "G"
+            ],
+            "referenceCode": 594295
+          },
+          {
+            "carrierFsCode": "DL",
+            "flightNumber": "7282",
+            "serviceType": "J",
+            "serviceClasses": [
+              "J",
+              "Y"
+            ],
+            "trafficRestrictions": [
+              "Q"
+            ],
+            "referenceCode": 1723183
+          },
+          {
+            "carrierFsCode": "EY",
+            "flightNumber": "6731",
+            "serviceType": "J",
+            "serviceClasses": [
+              "J",
+              "Y"
+            ],
+            "trafficRestrictions": [
+              "E"
+            ],
+            "referenceCode": 1929450
+          },
+          {
+            "carrierFsCode": "HX",
+            "flightNumber": "3464",
+            "serviceType": "J",
+            "serviceClasses": [
+              "J",
+              "Y"
+            ],
+            "trafficRestrictions": [
+              "Y"
+            ],
+            "referenceCode": 2212766
+          },
+          {
+            "carrierFsCode": "SA",
+            "flightNumber": "7258",
+            "serviceType": "J",
+            "serviceClasses": [
+              "J",
+              "Y"
+            ],
+            "trafficRestrictions": [
+              "G"
+            ],
+            "referenceCode": 3303583
+          },
+          {
+            "carrierFsCode": "SQ",
+            "flightNumber": "6881",
+            "serviceType": "J",
+            "serviceClasses": [
+              "J",
+              "Y"
+            ],
+            "trafficRestrictions": [],
+            "referenceCode": 3465488
+          }
+        ],
+        "referenceCode": "794-4061126--"
+      },
+      {
+        "carrierFsCode": "AC",
+        "flightNumber": "2736",
+        "departureAirportFsCode": "PER",
+        "arrivalAirportFsCode": "SYD",
+        "stops": 0,
+        "departureTerminal": "1",
+        "arrivalTerminal": "2",
+        "departureTime": "2019-03-12T15:20:00",
+        "arrivalTime": "2019-03-12T22:35:00",
+        "flightEquipmentIataCode": "73H",
+        "isCodeshare": true,
+        "isWetlease": false,
+        "serviceType": "J",
+        "serviceClasses": [
+          "F",
+          "J",
+          "Y"
+        ],
+        "trafficRestrictions": [
+          "G"
+        ],
+        "operator": {
+          "carrierFsCode": "VA",
+          "flightNumber": "562",
+          "serviceType": "J",
+          "serviceClasses": [
+            "J",
+            "Y"
+          ],
+          "trafficRestrictions": []
+        },
+        "codeshares": [],
+        "referenceCode": "794-4061126--594295"
+      },
+      {
+        "carrierFsCode": "DL",
+        "flightNumber": "7282",
+        "departureAirportFsCode": "PER",
+        "arrivalAirportFsCode": "SYD",
+        "stops": 0,
+        "departureTerminal": "1",
+        "arrivalTerminal": "2",
+        "departureTime": "2019-03-12T15:20:00",
+        "arrivalTime": "2019-03-12T22:35:00",
+        "flightEquipmentIataCode": "73H",
+        "isCodeshare": true,
+        "isWetlease": false,
+        "serviceType": "J",
+        "serviceClasses": [
+          "J",
+          "Y"
+        ],
+        "trafficRestrictions": [
+          "Q"
+        ],
+        "operator": {
+          "carrierFsCode": "VA",
+          "flightNumber": "562",
+          "serviceType": "J",
+          "serviceClasses": [
+            "J",
+            "Y"
+          ],
+          "trafficRestrictions": []
+        },
+        "codeshares": [],
+        "referenceCode": "794-4061126--1723183"
+      },
+      {
+        "carrierFsCode": "EY",
+        "flightNumber": "6731",
+        "departureAirportFsCode": "PER",
+        "arrivalAirportFsCode": "SYD",
+        "stops": 0,
+        "departureTerminal": "1",
+        "arrivalTerminal": "2",
+        "departureTime": "2019-03-12T15:20:00",
+        "arrivalTime": "2019-03-12T22:35:00",
+        "flightEquipmentIataCode": "73H",
+        "isCodeshare": true,
+        "isWetlease": false,
+        "serviceType": "J",
+        "serviceClasses": [
+          "J",
+          "Y"
+        ],
+        "trafficRestrictions": [
+          "E"
+        ],
+        "operator": {
+          "carrierFsCode": "VA",
+          "flightNumber": "562",
+          "serviceType": "J",
+          "serviceClasses": [
+            "J",
+            "Y"
+          ],
+          "trafficRestrictions": []
+        },
+        "codeshares": [],
+        "referenceCode": "794-4061126--1929450"
+      },
+      {
+        "carrierFsCode": "HX",
+        "flightNumber": "3464",
+        "departureAirportFsCode": "PER",
+        "arrivalAirportFsCode": "SYD",
+        "stops": 0,
+        "departureTerminal": "1",
+        "arrivalTerminal": "2",
+        "departureTime": "2019-03-12T15:20:00",
+        "arrivalTime": "2019-03-12T22:35:00",
+        "flightEquipmentIataCode": "73H",
+        "isCodeshare": true,
+        "isWetlease": false,
+        "serviceType": "J",
+        "serviceClasses": [
+          "J",
+          "Y"
+        ],
+        "trafficRestrictions": [
+          "Y"
+        ],
+        "operator": {
+          "carrierFsCode": "VA",
+          "flightNumber": "562",
+          "serviceType": "J",
+          "serviceClasses": [
+            "J",
+            "Y"
+          ],
+          "trafficRestrictions": []
+        },
+        "codeshares": [],
+        "referenceCode": "794-4061126--2212766"
+      },
+      {
+        "carrierFsCode": "SA",
+        "flightNumber": "7258",
+        "departureAirportFsCode": "PER",
+        "arrivalAirportFsCode": "SYD",
+        "stops": 0,
+        "departureTerminal": "1",
+        "arrivalTerminal": "2",
+        "departureTime": "2019-03-12T15:20:00",
+        "arrivalTime": "2019-03-12T22:35:00",
+        "flightEquipmentIataCode": "73H",
+        "isCodeshare": true,
+        "isWetlease": false,
+        "serviceType": "J",
+        "serviceClasses": [
+          "J",
+          "Y"
+        ],
+        "trafficRestrictions": [
+          "G"
+        ],
+        "operator": {
+          "carrierFsCode": "VA",
+          "flightNumber": "562",
+          "serviceType": "J",
+          "serviceClasses": [
+            "J",
+            "Y"
+          ],
+          "trafficRestrictions": []
+        },
+        "codeshares": [],
+        "referenceCode": "794-4061126--3303583"
+      },
+      {
+        "carrierFsCode": "SQ",
+        "flightNumber": "6881",
+        "departureAirportFsCode": "PER",
+        "arrivalAirportFsCode": "SYD",
+        "stops": 0,
+        "departureTerminal": "1",
+        "arrivalTerminal": "2",
+        "departureTime": "2019-03-12T15:20:00",
+        "arrivalTime": "2019-03-12T22:35:00",
+        "flightEquipmentIataCode": "73H",
+        "isCodeshare": true,
+        "isWetlease": false,
+        "serviceType": "J",
+        "serviceClasses": [
+          "J",
+          "Y"
+        ],
+        "trafficRestrictions": [],
+        "operator": {
+          "carrierFsCode": "VA",
+          "flightNumber": "562",
+          "serviceType": "J",
+          "serviceClasses": [
+            "J",
+            "Y"
+          ],
+          "trafficRestrictions": []
+        },
+        "codeshares": [],
+        "referenceCode": "794-4061126--3465488"
+      },
+      {
+        "carrierFsCode": "JQ",
+        "flightNumber": "610",
+        "departureAirportFsCode": "AVV",
+        "arrivalAirportFsCode": "SYD",
+        "stops": 0,
+        "arrivalTerminal": "2",
+        "departureTime": "2019-03-12T20:35:00",
+        "arrivalTime": "2019-03-12T22:00:00",
+        "flightEquipmentIataCode": "320",
+        "isCodeshare": false,
+        "isWetlease": false,
+        "serviceType": "J",
+        "serviceClasses": [
+          "R",
+          "F",
+          "J",
+          "Y"
+        ],
+        "trafficRestrictions": [],
+        "codeshares": [
+          {
+            "carrierFsCode": "EK",
+            "flightNumber": "7581",
+            "serviceType": "J",
+            "serviceClasses": [
+              "R",
+              "Y"
+            ],
+            "trafficRestrictions": [
+              "Q"
+            ],
+            "referenceCode": 1816239
+          },
+          {
+            "carrierFsCode": "QF",
+            "flightNumber": "5610",
+            "serviceType": "J",
+            "serviceClasses": [
+              "Y"
+            ],
+            "trafficRestrictions": [
+              "W"
+            ],
+            "referenceCode": 3129777
+          }
+        ],
+        "referenceCode": "794-2304042--"
+      },
+      {
+        "carrierFsCode": "EK",
+        "flightNumber": "7581",
+        "departureAirportFsCode": "AVV",
+        "arrivalAirportFsCode": "SYD",
+        "stops": 0,
+        "arrivalTerminal": "2",
+        "departureTime": "2019-03-12T20:35:00",
+        "arrivalTime": "2019-03-12T22:00:00",
+        "flightEquipmentIataCode": "320",
+        "isCodeshare": true,
+        "isWetlease": false,
+        "serviceType": "J",
+        "serviceClasses": [
+          "R",
+          "Y"
+        ],
+        "trafficRestrictions": [
+          "Q"
+        ],
+        "operator": {
+          "carrierFsCode": "JQ",
+          "flightNumber": "610",
+          "serviceType": "J",
+          "serviceClasses": [
+            "R",
+            "F",
+            "J",
+            "Y"
+          ],
+          "trafficRestrictions": []
+        },
+        "codeshares": [],
+        "referenceCode": "794-2304042--1816239"
+      },
+      {
+        "carrierFsCode": "QF",
+        "flightNumber": "5610",
+        "departureAirportFsCode": "AVV",
+        "arrivalAirportFsCode": "SYD",
+        "stops": 0,
+        "arrivalTerminal": "2",
+        "departureTime": "2019-03-12T20:35:00",
+        "arrivalTime": "2019-03-12T22:00:00",
+        "flightEquipmentIataCode": "320",
+        "isCodeshare": true,
+        "isWetlease": false,
+        "serviceType": "J",
+        "serviceClasses": [
+          "Y"
+        ],
+        "trafficRestrictions": [
+          "W"
+        ],
+        "operator": {
+          "carrierFsCode": "JQ",
+          "flightNumber": "610",
+          "serviceType": "J",
+          "serviceClasses": [
+            "R",
+            "F",
+            "J",
+            "Y"
+          ],
+          "trafficRestrictions": []
+        },
+        "codeshares": [],
+        "referenceCode": "794-2304042--3129777"
+      },
+      {
+        "carrierFsCode": "JQ",
+        "flightNumber": "518",
+        "departureAirportFsCode": "MEL",
+        "arrivalAirportFsCode": "SYD",
+        "stops": 0,
+        "departureTerminal": "4",
+        "arrivalTerminal": "2",
+        "departureTime": "2019-03-12T20:35:00",
+        "arrivalTime": "2019-03-12T22:00:00",
+        "flightEquipmentIataCode": "320",
+        "isCodeshare": false,
+        "isWetlease": false,
+        "serviceType": "J",
+        "serviceClasses": [
+          "R",
+          "F",
+          "J",
+          "Y"
+        ],
+        "trafficRestrictions": [],
+        "codeshares": [],
+        "referenceCode": "794-2305957--"
+      },
+      {
+        "carrierFsCode": "JQ",
+        "flightNumber": "769",
+        "departureAirportFsCode": "ADL",
+        "arrivalAirportFsCode": "SYD",
+        "stops": 0,
+        "departureTerminal": "1",
+        "arrivalTerminal": "2",
+        "departureTime": "2019-03-12T19:45:00",
+        "arrivalTime": "2019-03-12T22:10:00",
+        "flightEquipmentIataCode": "320",
+        "isCodeshare": false,
+        "isWetlease": false,
+        "serviceType": "J",
+        "serviceClasses": [
+          "R",
+          "F",
+          "J",
+          "Y"
+        ],
+        "trafficRestrictions": [],
+        "codeshares": [],
+        "referenceCode": "794-2303601--"
+      },
+      {
+        "carrierFsCode": "JQ",
+        "flightNumber": "427",
+        "departureAirportFsCode": "OOL",
+        "arrivalAirportFsCode": "SYD",
+        "stops": 0,
+        "departureTerminal": "1",
+        "arrivalTerminal": "2",
+        "departureTime": "2019-03-12T19:40:00",
+        "arrivalTime": "2019-03-12T22:10:00",
+        "flightEquipmentIataCode": "321",
+        "isCodeshare": false,
+        "isWetlease": false,
+        "serviceType": "J",
+        "serviceClasses": [
+          "R",
+          "F",
+          "J",
+          "Y"
+        ],
+        "trafficRestrictions": [],
+        "codeshares": [],
+        "referenceCode": "794-2306566--"
+      },
+      {
+        "carrierFsCode": "JQ",
+        "flightNumber": "823",
+        "departureAirportFsCode": "BNE",
+        "arrivalAirportFsCode": "SYD",
+        "stops": 0,
+        "departureTerminal": "D",
+        "arrivalTerminal": "2",
+        "departureTime": "2019-03-12T19:40:00",
+        "arrivalTime": "2019-03-12T22:15:00",
+        "flightEquipmentIataCode": "320",
+        "isCodeshare": false,
+        "isWetlease": false,
+        "serviceType": "J",
+        "serviceClasses": [
+          "R",
+          "F",
+          "J",
+          "Y"
+        ],
+        "trafficRestrictions": [],
+        "codeshares": [],
+        "referenceCode": "794-2304310--"
+      },
+      {
+        "carrierFsCode": "JQ",
+        "flightNumber": "750",
+        "departureAirportFsCode": "LST",
+        "arrivalAirportFsCode": "SYD",
+        "stops": 0,
+        "arrivalTerminal": "2",
+        "departureTime": "2019-03-12T20:45:00",
+        "arrivalTime": "2019-03-12T22:20:00",
+        "flightEquipmentIataCode": "320",
+        "isCodeshare": false,
+        "isWetlease": false,
+        "serviceType": "J",
+        "serviceClasses": [
+          "R",
+          "F",
+          "J",
+          "Y"
+        ],
+        "trafficRestrictions": [],
+        "codeshares": [
+          {
+            "carrierFsCode": "QF",
+            "flightNumber": "5750",
+            "serviceType": "J",
+            "serviceClasses": [
+              "Y"
+            ],
+            "trafficRestrictions": [
+              "W"
+            ],
+            "referenceCode": 3146949
+          }
+        ],
+        "referenceCode": "794-2305198--"
+      },
+      {
+        "carrierFsCode": "QF",
+        "flightNumber": "5750",
+        "departureAirportFsCode": "LST",
+        "arrivalAirportFsCode": "SYD",
+        "stops": 0,
+        "arrivalTerminal": "2",
+        "departureTime": "2019-03-12T20:45:00",
+        "arrivalTime": "2019-03-12T22:20:00",
+        "flightEquipmentIataCode": "320",
+        "isCodeshare": true,
+        "isWetlease": false,
+        "serviceType": "J",
+        "serviceClasses": [
+          "Y"
+        ],
+        "trafficRestrictions": [
+          "W"
+        ],
+        "operator": {
+          "carrierFsCode": "JQ",
+          "flightNumber": "750",
+          "serviceType": "J",
+          "serviceClasses": [
+            "R",
+            "F",
+            "J",
+            "Y"
+          ],
+          "trafficRestrictions": []
+        },
+        "codeshares": [],
+        "referenceCode": "794-2305198--3146949"
+      },
+      {
+        "carrierFsCode": "JQ",
+        "flightNumber": "524",
+        "departureAirportFsCode": "MEL",
+        "arrivalAirportFsCode": "SYD",
+        "stops": 0,
+        "departureTerminal": "4",
+        "arrivalTerminal": "2",
+        "departureTime": "2019-03-12T20:55:00",
+        "arrivalTime": "2019-03-12T22:20:00",
+        "flightEquipmentIataCode": "320",
+        "isCodeshare": false,
+        "isWetlease": false,
+        "serviceType": "J",
+        "serviceClasses": [
+          "R",
+          "F",
+          "J",
+          "Y"
+        ],
+        "trafficRestrictions": [],
+        "codeshares": [],
+        "referenceCode": "794-2305937--"
+      },
+      {
+        "carrierFsCode": "EK",
+        "flightNumber": "414",
+        "departureAirportFsCode": "DXB",
+        "arrivalAirportFsCode": "SYD",
+        "stops": 0,
+        "departureTerminal": "3",
+        "arrivalTerminal": "1",
+        "departureTime": "2019-03-12T01:55:00",
+        "arrivalTime": "2019-03-12T22:30:00",
+        "flightEquipmentIataCode": "388",
+        "isCodeshare": false,
+        "isWetlease": false,
+        "serviceType": "J",
+        "serviceClasses": [
+          "R",
+          "F",
+          "J",
+          "Y"
+        ],
+        "trafficRestrictions": [],
+        "codeshares": [
+          {
+            "carrierFsCode": "QF",
+            "flightNumber": "8414",
+            "serviceType": "J",
+            "serviceClasses": [
+              "F",
+              "J",
+              "Y"
+            ],
+            "trafficRestrictions": [],
+            "referenceCode": 3139293
+          }
+        ],
+        "referenceCode": "794-1828873--"
+      },
+      {
+        "carrierFsCode": "QF",
+        "flightNumber": "8414",
+        "departureAirportFsCode": "DXB",
+        "arrivalAirportFsCode": "SYD",
+        "stops": 0,
+        "departureTerminal": "3",
+        "arrivalTerminal": "1",
+        "departureTime": "2019-03-12T01:55:00",
+        "arrivalTime": "2019-03-12T22:30:00",
+        "flightEquipmentIataCode": "388",
+        "isCodeshare": true,
+        "isWetlease": false,
+        "serviceType": "J",
+        "serviceClasses": [
+          "F",
+          "J",
+          "Y"
+        ],
+        "trafficRestrictions": [],
+        "operator": {
+          "carrierFsCode": "EK",
+          "flightNumber": "414",
+          "serviceType": "J",
+          "serviceClasses": [
+            "R",
+            "F",
+            "J",
+            "Y"
+          ],
+          "trafficRestrictions": []
+        },
+        "codeshares": [],
+        "referenceCode": "794-1828873--3139293"
+      },
+      {
+        "carrierFsCode": "QF",
+        "flightNumber": "494",
+        "departureAirportFsCode": "MEL",
+        "arrivalAirportFsCode": "SYD",
+        "stops": 0,
+        "departureTerminal": "1",
+        "arrivalTerminal": "3",
+        "departureTime": "2019-03-12T21:00:00",
+        "arrivalTime": "2019-03-12T22:25:00",
+        "flightEquipmentIataCode": "73H",
+        "isCodeshare": false,
+        "isWetlease": false,
+        "serviceType": "J",
+        "serviceClasses": [
+          "J",
+          "Y"
+        ],
+        "trafficRestrictions": [],
+        "codeshares": [
+          {
+            "carrierFsCode": "EK",
+            "flightNumber": "5494",
+            "serviceType": "J",
+            "serviceClasses": [
+              "R",
+              "J",
+              "Y"
+            ],
+            "trafficRestrictions": [
+              "Q"
+            ],
+            "referenceCode": 1840562
+          },
+          {
+            "carrierFsCode": "NZ",
+            "flightNumber": "1894",
+            "serviceType": "J",
+            "serviceClasses": [
+              "F",
+              "J",
+              "Y"
+            ],
+            "trafficRestrictions": [
+              "Q"
+            ],
+            "referenceCode": 2987143
+          }
+        ],
+        "referenceCode": "794-3149517--"
+      },
+      {
+        "carrierFsCode": "EK",
+        "flightNumber": "5494",
+        "departureAirportFsCode": "MEL",
+        "arrivalAirportFsCode": "SYD",
+        "stops": 0,
+        "departureTerminal": "1",
+        "arrivalTerminal": "3",
+        "departureTime": "2019-03-12T21:00:00",
+        "arrivalTime": "2019-03-12T22:25:00",
+        "flightEquipmentIataCode": "73H",
+        "isCodeshare": true,
+        "isWetlease": false,
+        "serviceType": "J",
+        "serviceClasses": [
+          "R",
+          "J",
+          "Y"
+        ],
+        "trafficRestrictions": [
+          "Q"
+        ],
+        "operator": {
+          "carrierFsCode": "QF",
+          "flightNumber": "494",
+          "serviceType": "J",
+          "serviceClasses": [
+            "J",
+            "Y"
+          ],
+          "trafficRestrictions": []
+        },
+        "codeshares": [],
+        "referenceCode": "794-3149517--1840562"
+      },
+      {
+        "carrierFsCode": "NZ",
+        "flightNumber": "1894",
+        "departureAirportFsCode": "MEL",
+        "arrivalAirportFsCode": "SYD",
+        "stops": 0,
+        "departureTerminal": "1",
+        "arrivalTerminal": "3",
+        "departureTime": "2019-03-12T21:00:00",
+        "arrivalTime": "2019-03-12T22:25:00",
+        "flightEquipmentIataCode": "73H",
+        "isCodeshare": true,
+        "isWetlease": false,
+        "serviceType": "J",
+        "serviceClasses": [
+          "F",
+          "J",
+          "Y"
+        ],
+        "trafficRestrictions": [
+          "Q"
+        ],
+        "operator": {
+          "carrierFsCode": "QF",
+          "flightNumber": "494",
+          "serviceType": "J",
+          "serviceClasses": [
+            "J",
+            "Y"
+          ],
+          "trafficRestrictions": []
+        },
+        "codeshares": [],
+        "referenceCode": "794-3149517--2987143"
+      },
+      {
+        "carrierFsCode": "EY",
+        "flightNumber": "6327",
+        "departureAirportFsCode": "BNE",
+        "arrivalAirportFsCode": "SYD",
+        "stops": 0,
+        "departureTerminal": "D",
+        "arrivalTerminal": "2",
+        "departureTime": "2019-03-12T20:05:00",
+        "arrivalTime": "2019-03-12T22:40:00",
+        "flightEquipmentIataCode": "73H",
+        "isCodeshare": true,
+        "isWetlease": false,
+        "serviceType": "J",
+        "serviceClasses": [
+          "J",
+          "Y"
+        ],
+        "trafficRestrictions": [
+          "E"
+        ],
+        "operator": {
+          "carrierFsCode": "VA",
+          "flightNumber": "992",
+          "serviceType": "J",
+          "serviceClasses": [
+            "J",
+            "Y"
+          ],
+          "trafficRestrictions": []
+        },
+        "codeshares": [],
+        "referenceCode": "794-4043953--10270604"
+      },
+      {
+        "carrierFsCode": "HX",
+        "flightNumber": "3194",
+        "departureAirportFsCode": "BNE",
+        "arrivalAirportFsCode": "SYD",
+        "stops": 0,
+        "departureTerminal": "D",
+        "arrivalTerminal": "2",
+        "departureTime": "2019-03-12T20:05:00",
+        "arrivalTime": "2019-03-12T22:40:00",
+        "flightEquipmentIataCode": "73H",
+        "isCodeshare": true,
+        "isWetlease": false,
+        "serviceType": "J",
+        "serviceClasses": [
+          "J",
+          "Y"
+        ],
+        "trafficRestrictions": [
+          "Y"
+        ],
+        "operator": {
+          "carrierFsCode": "VA",
+          "flightNumber": "992",
+          "serviceType": "J",
+          "serviceClasses": [
+            "J",
+            "Y"
+          ],
+          "trafficRestrictions": []
+        },
+        "codeshares": [],
+        "referenceCode": "794-4043953--10270606"
+      },
+      {
+        "carrierFsCode": "SQ",
+        "flightNumber": "6419",
+        "departureAirportFsCode": "BNE",
+        "arrivalAirportFsCode": "SYD",
+        "stops": 0,
+        "departureTerminal": "D",
+        "arrivalTerminal": "2",
+        "departureTime": "2019-03-12T20:05:00",
+        "arrivalTime": "2019-03-12T22:40:00",
+        "flightEquipmentIataCode": "73H",
+        "isCodeshare": true,
+        "isWetlease": false,
+        "serviceType": "J",
+        "serviceClasses": [
+          "J",
+          "Y"
+        ],
+        "trafficRestrictions": [
+          "Q"
+        ],
+        "operator": {
+          "carrierFsCode": "VA",
+          "flightNumber": "992",
+          "serviceType": "J",
+          "serviceClasses": [
+            "J",
+            "Y"
+          ],
+          "trafficRestrictions": []
+        },
+        "codeshares": [],
+        "referenceCode": "794-4043953--10270608"
+      },
+      {
+        "carrierFsCode": "VS",
+        "flightNumber": "7742",
+        "departureAirportFsCode": "BNE",
+        "arrivalAirportFsCode": "SYD",
+        "stops": 0,
+        "departureTerminal": "D",
+        "arrivalTerminal": "2",
+        "departureTime": "2019-03-12T20:05:00",
+        "arrivalTime": "2019-03-12T22:40:00",
+        "flightEquipmentIataCode": "73H",
+        "isCodeshare": true,
+        "isWetlease": false,
+        "serviceType": "J",
+        "serviceClasses": [
+          "R",
+          "J",
+          "Y"
+        ],
+        "trafficRestrictions": [
+          "X"
+        ],
+        "operator": {
+          "carrierFsCode": "VA",
+          "flightNumber": "992",
+          "serviceType": "J",
+          "serviceClasses": [
+            "J",
+            "Y"
+          ],
+          "trafficRestrictions": []
+        },
+        "codeshares": [],
+        "referenceCode": "794-4043953--10270610"
+      },
+      {
+        "carrierFsCode": "QF",
+        "flightNumber": "559",
+        "departureAirportFsCode": "BNE",
+        "arrivalAirportFsCode": "SYD",
+        "stops": 0,
+        "departureTerminal": "D",
+        "arrivalTerminal": "3",
+        "departureTime": "2019-03-12T19:55:00",
+        "arrivalTime": "2019-03-12T22:30:00",
+        "flightEquipmentIataCode": "73H",
+        "isCodeshare": false,
+        "isWetlease": false,
+        "serviceType": "J",
+        "serviceClasses": [
+          "J",
+          "Y"
+        ],
+        "trafficRestrictions": [],
+        "codeshares": [
+          {
+            "carrierFsCode": "EK",
+            "flightNumber": "5559",
+            "serviceType": "J",
+            "serviceClasses": [
+              "R",
+              "J",
+              "Y"
+            ],
+            "trafficRestrictions": [
+              "Q"
+            ],
+            "referenceCode": 1818636
+          },
+          {
+            "carrierFsCode": "NZ",
+            "flightNumber": "1759",
+            "serviceType": "J",
+            "serviceClasses": [
+              "F",
+              "J",
+              "Y"
+            ],
+            "trafficRestrictions": [
+              "Q"
+            ],
+            "referenceCode": 2960062
+          }
+        ],
+        "referenceCode": "794-3132348--"
+      },
+      {
+        "carrierFsCode": "EK",
+        "flightNumber": "5559",
+        "departureAirportFsCode": "BNE",
+        "arrivalAirportFsCode": "SYD",
+        "stops": 0,
+        "departureTerminal": "D",
+        "arrivalTerminal": "3",
+        "departureTime": "2019-03-12T19:55:00",
+        "arrivalTime": "2019-03-12T22:30:00",
+        "flightEquipmentIataCode": "73H",
+        "isCodeshare": true,
+        "isWetlease": false,
+        "serviceType": "J",
+        "serviceClasses": [
+          "R",
+          "J",
+          "Y"
+        ],
+        "trafficRestrictions": [
+          "Q"
+        ],
+        "operator": {
+          "carrierFsCode": "QF",
+          "flightNumber": "559",
+          "serviceType": "J",
+          "serviceClasses": [
+            "J",
+            "Y"
+          ],
+          "trafficRestrictions": []
+        },
+        "codeshares": [],
+        "referenceCode": "794-3132348--1818636"
+      },
+      {
+        "carrierFsCode": "NZ",
+        "flightNumber": "1759",
+        "departureAirportFsCode": "BNE",
+        "arrivalAirportFsCode": "SYD",
+        "stops": 0,
+        "departureTerminal": "D",
+        "arrivalTerminal": "3",
+        "departureTime": "2019-03-12T19:55:00",
+        "arrivalTime": "2019-03-12T22:30:00",
+        "flightEquipmentIataCode": "73H",
+        "isCodeshare": true,
+        "isWetlease": false,
+        "serviceType": "J",
+        "serviceClasses": [
+          "F",
+          "J",
+          "Y"
+        ],
+        "trafficRestrictions": [
+          "Q"
+        ],
+        "operator": {
+          "carrierFsCode": "QF",
+          "flightNumber": "559",
+          "serviceType": "J",
+          "serviceClasses": [
+            "J",
+            "Y"
+          ],
+          "trafficRestrictions": []
+        },
+        "codeshares": [],
+        "referenceCode": "794-3132348--2960062"
+      },
+      {
+        "carrierFsCode": "VA",
+        "flightNumber": "992",
+        "departureAirportFsCode": "BNE",
+        "arrivalAirportFsCode": "SYD",
+        "stops": 0,
+        "departureTerminal": "D",
+        "arrivalTerminal": "2",
+        "departureTime": "2019-03-12T20:05:00",
+        "arrivalTime": "2019-03-12T22:40:00",
+        "flightEquipmentIataCode": "73H",
+        "isCodeshare": false,
+        "isWetlease": false,
+        "serviceType": "J",
+        "serviceClasses": [
+          "J",
+          "Y"
+        ],
+        "trafficRestrictions": [],
+        "codeshares": [
+          {
+            "carrierFsCode": "EY",
+            "flightNumber": "6327",
+            "serviceType": "J",
+            "serviceClasses": [
+              "J",
+              "Y"
+            ],
+            "trafficRestrictions": [
+              "E"
+            ],
+            "referenceCode": 10270604
+          },
+          {
+            "carrierFsCode": "HX",
+            "flightNumber": "3194",
+            "serviceType": "J",
+            "serviceClasses": [
+              "J",
+              "Y"
+            ],
+            "trafficRestrictions": [
+              "Y"
+            ],
+            "referenceCode": 10270606
+          },
+          {
+            "carrierFsCode": "SQ",
+            "flightNumber": "6419",
+            "serviceType": "J",
+            "serviceClasses": [
+              "J",
+              "Y"
+            ],
+            "trafficRestrictions": [
+              "Q"
+            ],
+            "referenceCode": 10270608
+          },
+          {
+            "carrierFsCode": "VS",
+            "flightNumber": "7742",
+            "serviceType": "J",
+            "serviceClasses": [
+              "R",
+              "J",
+              "Y"
+            ],
+            "trafficRestrictions": [
+              "X"
+            ],
+            "referenceCode": 10270610
+          },
+          {
+            "carrierFsCode": "HU",
+            "flightNumber": "8104",
+            "serviceType": "J",
+            "serviceClasses": [
+              "J",
+              "Y"
+            ],
+            "trafficRestrictions": [],
+            "referenceCode": 10270612
+          }
+        ],
+        "referenceCode": "794-4043953--"
+      },
+      {
+        "carrierFsCode": "HU",
+        "flightNumber": "8104",
+        "departureAirportFsCode": "BNE",
+        "arrivalAirportFsCode": "SYD",
+        "stops": 0,
+        "departureTerminal": "D",
+        "arrivalTerminal": "2",
+        "departureTime": "2019-03-12T20:05:00",
+        "arrivalTime": "2019-03-12T22:40:00",
+        "flightEquipmentIataCode": "73H",
+        "isCodeshare": true,
+        "isWetlease": false,
+        "serviceType": "J",
+        "serviceClasses": [
+          "J",
+          "Y"
+        ],
+        "trafficRestrictions": [],
+        "operator": {
+          "carrierFsCode": "VA",
+          "flightNumber": "992",
+          "serviceType": "J",
+          "serviceClasses": [
+            "J",
+            "Y"
+          ],
+          "trafficRestrictions": []
+        },
+        "codeshares": [],
+        "referenceCode": "794-4043953--10270612"
+      },
+      {
+        "carrierFsCode": "VA",
+        "flightNumber": "899",
+        "departureAirportFsCode": "MEL",
+        "arrivalAirportFsCode": "SYD",
+        "stops": 0,
+        "departureTerminal": "3",
+        "arrivalTerminal": "2",
+        "departureTime": "2019-03-12T21:15:00",
+        "arrivalTime": "2019-03-12T22:40:00",
+        "flightEquipmentIataCode": "73H",
+        "isCodeshare": false,
+        "isWetlease": false,
+        "serviceType": "J",
+        "serviceClasses": [
+          "J",
+          "Y"
+        ],
+        "trafficRestrictions": [],
+        "codeshares": [
+          {
+            "carrierFsCode": "HU",
+            "flightNumber": "8641",
+            "serviceType": "J",
+            "serviceClasses": [
+              "J",
+              "Y"
+            ],
+            "trafficRestrictions": [],
+            "referenceCode": 2104241
+          },
+          {
+            "carrierFsCode": "EY",
+            "flightNumber": "6352",
+            "serviceType": "J",
+            "serviceClasses": [
+              "J",
+              "Y"
+            ],
+            "trafficRestrictions": [
+              "E"
+            ],
+            "referenceCode": 11135948
+          },
+          {
+            "carrierFsCode": "SQ",
+            "flightNumber": "6863",
+            "serviceType": "J",
+            "serviceClasses": [
+              "J",
+              "Y"
+            ],
+            "trafficRestrictions": [],
+            "referenceCode": 11135949
+          }
+        ],
+        "referenceCode": "794-4057779--"
+      },
+      {
+        "carrierFsCode": "HU",
+        "flightNumber": "8641",
+        "departureAirportFsCode": "MEL",
+        "arrivalAirportFsCode": "SYD",
+        "stops": 0,
+        "departureTerminal": "3",
+        "arrivalTerminal": "2",
+        "departureTime": "2019-03-12T21:15:00",
+        "arrivalTime": "2019-03-12T22:40:00",
+        "flightEquipmentIataCode": "73H",
+        "isCodeshare": true,
+        "isWetlease": false,
+        "serviceType": "J",
+        "serviceClasses": [
+          "J",
+          "Y"
+        ],
+        "trafficRestrictions": [],
+        "operator": {
+          "carrierFsCode": "VA",
+          "flightNumber": "899",
+          "serviceType": "J",
+          "serviceClasses": [
+            "J",
+            "Y"
+          ],
+          "trafficRestrictions": []
+        },
+        "codeshares": [],
+        "referenceCode": "794-4057779--2104241"
+      },
+      {
+        "carrierFsCode": "EY",
+        "flightNumber": "6352",
+        "departureAirportFsCode": "MEL",
+        "arrivalAirportFsCode": "SYD",
+        "stops": 0,
+        "departureTerminal": "3",
+        "arrivalTerminal": "2",
+        "departureTime": "2019-03-12T21:15:00",
+        "arrivalTime": "2019-03-12T22:40:00",
+        "flightEquipmentIataCode": "73H",
+        "isCodeshare": true,
+        "isWetlease": false,
+        "serviceType": "J",
+        "serviceClasses": [
+          "J",
+          "Y"
+        ],
+        "trafficRestrictions": [
+          "E"
+        ],
+        "operator": {
+          "carrierFsCode": "VA",
+          "flightNumber": "899",
+          "serviceType": "J",
+          "serviceClasses": [
+            "J",
+            "Y"
+          ],
+          "trafficRestrictions": []
+        },
+        "codeshares": [],
+        "referenceCode": "794-4057779--11135948"
+      },
+      {
+        "carrierFsCode": "SQ",
+        "flightNumber": "6863",
+        "departureAirportFsCode": "MEL",
+        "arrivalAirportFsCode": "SYD",
+        "stops": 0,
+        "departureTerminal": "3",
+        "arrivalTerminal": "2",
+        "departureTime": "2019-03-12T21:15:00",
+        "arrivalTime": "2019-03-12T22:40:00",
+        "flightEquipmentIataCode": "73H",
+        "isCodeshare": true,
+        "isWetlease": false,
+        "serviceType": "J",
+        "serviceClasses": [
+          "J",
+          "Y"
+        ],
+        "trafficRestrictions": [],
+        "operator": {
+          "carrierFsCode": "VA",
+          "flightNumber": "899",
+          "serviceType": "J",
+          "serviceClasses": [
+            "J",
+            "Y"
+          ],
+          "trafficRestrictions": []
+        },
+        "codeshares": [],
+        "referenceCode": "794-4057779--11135949"
+      },
+      {
+        "carrierFsCode": "QF",
+        "flightNumber": "566",
+        "departureAirportFsCode": "PER",
+        "arrivalAirportFsCode": "SYD",
+        "stops": 0,
+        "departureTerminal": "4",
+        "arrivalTerminal": "3",
+        "departureTime": "2019-03-12T15:20:00",
+        "arrivalTime": "2019-03-12T22:30:00",
+        "flightEquipmentIataCode": "332",
+        "isCodeshare": false,
+        "isWetlease": false,
+        "serviceType": "J",
+        "serviceClasses": [
+          "J",
+          "Y"
+        ],
+        "trafficRestrictions": [],
+        "codeshares": [
+          {
+            "carrierFsCode": "NZ",
+            "flightNumber": "7566",
+            "serviceType": "J",
+            "serviceClasses": [
+              "F",
+              "J",
+              "Y"
+            ],
+            "trafficRestrictions": [
+              "Q"
+            ],
+            "referenceCode": 11423743
+          },
+          {
+            "carrierFsCode": "EK",
+            "flightNumber": "5566",
+            "serviceType": "J",
+            "serviceClasses": [
+              "R",
+              "J",
+              "Y"
+            ],
+            "trafficRestrictions": [
+              "Q"
+            ],
+            "referenceCode": 11423744
+          }
+        ],
+        "referenceCode": "794-3155277--"
+      },
+      {
+        "carrierFsCode": "NZ",
+        "flightNumber": "7566",
+        "departureAirportFsCode": "PER",
+        "arrivalAirportFsCode": "SYD",
+        "stops": 0,
+        "departureTerminal": "4",
+        "arrivalTerminal": "3",
+        "departureTime": "2019-03-12T15:20:00",
+        "arrivalTime": "2019-03-12T22:30:00",
+        "flightEquipmentIataCode": "332",
+        "isCodeshare": true,
+        "isWetlease": false,
+        "serviceType": "J",
+        "serviceClasses": [
+          "F",
+          "J",
+          "Y"
+        ],
+        "trafficRestrictions": [
+          "Q"
+        ],
+        "operator": {
+          "carrierFsCode": "QF",
+          "flightNumber": "566",
+          "serviceType": "J",
+          "serviceClasses": [
+            "J",
+            "Y"
+          ],
+          "trafficRestrictions": []
+        },
+        "codeshares": [],
+        "referenceCode": "794-3155277--11423743"
+      },
+      {
+        "carrierFsCode": "EK",
+        "flightNumber": "5566",
+        "departureAirportFsCode": "PER",
+        "arrivalAirportFsCode": "SYD",
+        "stops": 0,
+        "departureTerminal": "4",
+        "arrivalTerminal": "3",
+        "departureTime": "2019-03-12T15:20:00",
+        "arrivalTime": "2019-03-12T22:30:00",
+        "flightEquipmentIataCode": "332",
+        "isCodeshare": true,
+        "isWetlease": false,
+        "serviceType": "J",
+        "serviceClasses": [
+          "R",
+          "J",
+          "Y"
+        ],
+        "trafficRestrictions": [
+          "Q"
+        ],
+        "operator": {
+          "carrierFsCode": "QF",
+          "flightNumber": "566",
+          "serviceType": "J",
+          "serviceClasses": [
+            "J",
+            "Y"
+          ],
+          "trafficRestrictions": []
+        },
+        "codeshares": [],
+        "referenceCode": "794-3155277--11423744"
+      }
+    ],
+    "appendix": {
+      "airlines": [
+        {
+          "fs": "AC",
+          "iata": "AC",
+          "icao": "ACA",
+          "name": "Air Canada",
+          "phoneNumber": "1-888-422-7533",
+          "active": true
+        },
+        {
+          "fs": "EK",
+          "iata": "EK",
+          "icao": "UAE",
+          "name": "Emirates",
+          "phoneNumber": "800 777 3999",
+          "active": true
+        },
+        {
+          "fs": "JQ",
+          "iata": "JQ",
+          "icao": "JST",
+          "name": "Jetstar",
+          "active": true
+        },
+        {
+          "fs": "DL",
+          "iata": "DL",
+          "icao": "DAL",
+          "name": "Delta Air Lines",
+          "phoneNumber": "1-800-221-1212",
+          "active": true
+        },
+        {
+          "fs": "VA",
+          "iata": "VA",
+          "icao": "VOZ",
+          "name": "Virgin Australia",
+          "active": true
+        },
+        {
+          "fs": "NZ",
+          "iata": "NZ",
+          "icao": "ANZ",
+          "name": "Air New Zealand",
+          "phoneNumber": "1-800-262-1234",
+          "active": true
+        },
+        {
+          "fs": "HU",
+          "iata": "HU",
+          "icao": "CHH",
+          "name": "Hainan Airlines",
+          "phoneNumber": "03-10-2007",
+          "active": true
+        },
+        {
+          "fs": "SA",
+          "iata": "SA",
+          "icao": "SAA",
+          "name": "South African Airways",
+          "phoneNumber": "+27 11 978 5313",
+          "active": true
+        },
+        {
+          "fs": "HX",
+          "iata": "HX",
+          "icao": "CRK",
+          "name": "Hong Kong Airlines",
+          "active": true
+        },
+        {
+          "fs": "EY",
+          "iata": "EY",
+          "icao": "ETD",
+          "name": "Etihad Airways",
+          "active": true
+        },
+        {
+          "fs": "QF",
+          "iata": "QF",
+          "icao": "QFA",
+          "name": "Qantas",
+          "phoneNumber": "+61 2 9691 3636",
+          "active": true
+        },
+        {
+          "fs": "VS",
+          "iata": "VS",
+          "icao": "VIR",
+          "name": "Virgin Atlantic",
+          "active": true
+        },
+        {
+          "fs": "SQ",
+          "iata": "SQ",
+          "icao": "SIA",
+          "name": "Singapore Airlines",
+          "phoneNumber": "+1 800 7423333",
+          "active": true
+        }
+      ],
+      "airports": [
+        {
+          "fs": "AVV",
+          "iata": "AVV",
+          "icao": "YMAV",
+          "name": "Avalon Airport",
+          "city": "Avalon",
+          "cityCode": "AVV",
+          "stateCode": "VIC",
+          "countryCode": "AU",
+          "countryName": "Australia",
+          "regionName": "Oceania",
+          "timeZoneRegionName": "Australia/Sydney",
+          "localTime": "2019-03-10T18:08:13.471",
+          "utcOffsetHours": 11,
+          "latitude": -38.026372,
+          "longitude": 144.473084,
+          "elevationFeet": 35,
+          "classification": 4,
+          "active": true
+        },
+        {
+          "fs": "ADL",
+          "iata": "ADL",
+          "icao": "YPAD",
+          "name": "Adelaide Airport",
+          "city": "Adelaide",
+          "cityCode": "ADL",
+          "stateCode": "SA",
+          "countryCode": "AU",
+          "countryName": "Australia",
+          "regionName": "Oceania",
+          "timeZoneRegionName": "Australia/Adelaide",
+          "localTime": "2019-03-10T17:38:13.471",
+          "utcOffsetHours": 10.5,
+          "latitude": -34.938176,
+          "longitude": 138.537351,
+          "elevationFeet": 20,
+          "classification": 2,
+          "active": true
+        },
+        {
+          "fs": "LST",
+          "iata": "LST",
+          "icao": "YMLT",
+          "name": "Launceston Airport",
+          "city": "Launceston",
+          "cityCode": "LST",
+          "stateCode": "TAS",
+          "countryCode": "AU",
+          "countryName": "Australia",
+          "regionName": "Oceania",
+          "timeZoneRegionName": "Australia/Hobart",
+          "localTime": "2019-03-10T18:08:13.471",
+          "utcOffsetHours": 11,
+          "latitude": -41.543511,
+          "longitude": 147.205328,
+          "elevationFeet": 562,
+          "classification": 3,
+          "active": true
+        },
+        {
+          "fs": "OOL",
+          "iata": "OOL",
+          "icao": "YBCG",
+          "name": "Gold Coast Airport",
+          "city": "Coolangatta (Gold Coast)",
+          "cityCode": "OOL",
+          "stateCode": "QLD",
+          "countryCode": "AU",
+          "countryName": "Australia",
+          "regionName": "Oceania",
+          "timeZoneRegionName": "Australia/Brisbane",
+          "localTime": "2019-03-10T17:08:13.471",
+          "utcOffsetHours": 10,
+          "latitude": -28.166164,
+          "longitude": 153.513137,
+          "elevationFeet": 21,
+          "classification": 3,
+          "active": true
+        },
+        {
+          "fs": "DXB",
+          "iata": "DXB",
+          "icao": "OMDB",
+          "name": "Dubai Airport",
+          "city": "Dubai",
+          "cityCode": "DXB",
+          "countryCode": "AE",
+          "countryName": "United Arab Emirates",
+          "regionName": "Middle East",
+          "timeZoneRegionName": "Asia/Dubai",
+          "localTime": "2019-03-10T11:08:13.471",
+          "utcOffsetHours": 4,
+          "latitude": 25.248664,
+          "longitude": 55.352916,
+          "elevationFeet": 34,
+          "classification": 1,
+          "active": true
+        },
+        {
+          "fs": "MEL",
+          "iata": "MEL",
+          "icao": "YMML",
+          "name": "Melbourne Tullamarine Airport",
+          "city": "Melbourne",
+          "cityCode": "MEL",
+          "stateCode": "VIC",
+          "countryCode": "AU",
+          "countryName": "Australia",
+          "regionName": "Oceania",
+          "timeZoneRegionName": "Australia/Sydney",
+          "localTime": "2019-03-10T18:08:13.471",
+          "utcOffsetHours": 11,
+          "latitude": -37.673295,
+          "longitude": 144.843013,
+          "elevationFeet": 370,
+          "classification": 1,
+          "active": true
+        },
+        {
+          "fs": "BNE",
+          "iata": "BNE",
+          "icao": "YBBN",
+          "name": "Brisbane Airport",
+          "city": "Brisbane",
+          "cityCode": "BNE",
+          "stateCode": "QLD",
+          "countryCode": "AU",
+          "countryName": "Australia",
+          "regionName": "Oceania",
+          "timeZoneRegionName": "Australia/Brisbane",
+          "localTime": "2019-03-10T17:08:13.471",
+          "utcOffsetHours": 10,
+          "latitude": -27.403031,
+          "longitude": 153.109058,
+          "elevationFeet": 13,
+          "classification": 1,
+          "active": true
+        },
+        {
+          "fs": "PER",
+          "iata": "PER",
+          "icao": "YPPH",
+          "name": "Perth Airport",
+          "city": "Perth",
+          "cityCode": "PER",
+          "stateCode": "WA",
+          "countryCode": "AU",
+          "countryName": "Australia",
+          "regionName": "Oceania",
+          "timeZoneRegionName": "Australia/Perth",
+          "localTime": "2019-03-10T15:08:13.471",
+          "utcOffsetHours": 8,
+          "latitude": -31.933604,
+          "longitude": 115.960236,
+          "elevationFeet": 67,
+          "classification": 2,
+          "active": true
+        },
+        {
+          "fs": "SYD",
+          "iata": "SYD",
+          "icao": "YSSY",
+          "name": "Sydney (Kingsford Smith) Airport",
+          "city": "Sydney",
+          "cityCode": "SYD",
+          "stateCode": "NSW",
+          "countryCode": "AU",
+          "countryName": "Australia",
+          "regionName": "Oceania",
+          "timeZoneRegionName": "Australia/Sydney",
+          "localTime": "2019-03-10T18:08:13.431",
+          "utcOffsetHours": 11,
+          "latitude": -33.932922,
+          "longitude": 151.179898,
+          "elevationFeet": 21,
+          "classification": 1,
+          "active": true
+        }
+      ],
+      "equipments": [
+        {
+          "iata": "73H",
+          "name": "Boeing 737-800 (winglets) Passenger/BBJ2",
+          "turboProp": false,
+          "jet": true,
+          "widebody": false,
+          "regional": false
+        },
+        {
+          "iata": "320",
+          "name": "Airbus A320",
+          "turboProp": false,
+          "jet": true,
+          "widebody": false,
+          "regional": false
+        },
+        {
+          "iata": "321",
+          "name": "Airbus A321",
+          "turboProp": false,
+          "jet": true,
+          "widebody": false,
+          "regional": false
+        },
+        {
+          "iata": "332",
+          "name": "Airbus A330-200",
+          "turboProp": false,
+          "jet": true,
+          "widebody": true,
+          "regional": false
+        },
+        {
+          "iata": "388",
+          "name": "Airbus A380-800 Passenger",
+          "turboProp": false,
+          "jet": true,
+          "widebody": true,
+          "regional": false
+        }
+      ]
+    }
+  },
+  "dataSize": null
+}

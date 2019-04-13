@@ -14,6 +14,11 @@ using Android.Support.Design.Widget;
 using Android.Gms.Tasks;
 using static Android.Views.View;
 using static AnalyticsInt.Entities.ViewModels;
+using System.IO;
+using AnalyticsCore.Models;
+using AnalyticsInt.Classes;
+using System.Threading.Tasks;
+using System.Threading;
 
 namespace AnalyticsInt.Droid
 {
@@ -31,15 +36,36 @@ namespace AnalyticsInt.Droid
         PayPalManager MainManager;
         protected override void OnCreate(Bundle bundle)
         {
+            
             TabLayoutResource = Resource.Layout.Tabbar;
             ToolbarResource = Resource.Layout.Toolbar;
             MainManager = new PayPalManager(this);
             base.OnCreate(bundle);
 
             global::Xamarin.Forms.Forms.Init(this, bundle);
-            LoadApplication(new App());
-          
+            try
+            {
+
             
+            MessagingCenter.Subscribe<AirportFlights, string>(this, "ReadFlightSampleData", (sender, args) =>
+            {
+                //var txtfiles = Assets.Open("AboutAssets.txt");
+               // Items = new AirportFlightResponseVM();
+               var Items = MyAirportFlights();
+
+
+            });
+            }
+            catch (Exception ex)
+            {
+
+                throw;
+            }
+            LoadApplication(new App());
+            FlightService flightApis = new FlightService();
+            
+
+
             MessagingCenter.Subscribe<LoginViewModel, string>(this, "Login", (sender, args) =>
             {
                 LoginVM = new LoginViewModel();
@@ -114,8 +140,8 @@ namespace AnalyticsInt.Droid
         {
             auth.CreateUserWithEmailAndPassword(email, password).AddOnCompleteListener(this, this);
         }
-
-        public void OnComplete(Task task)
+    
+        public void OnComplete(Android.Gms.Tasks.Task task)
         {
             if (task.IsSuccessful)
             {
@@ -133,6 +159,25 @@ namespace AnalyticsInt.Droid
         public void OnClick(Android.Views.View v)
         {
             throw new NotImplementedException();
+        }
+        public AirportFlightResponseVM MyAirportFlights()
+        {
+            Task<APIResponse<AirportFlightResponseVM>> flightforAirport = null;
+            FlightService flightApis = new FlightService();
+            var task = System.Threading.Tasks.Task.Run( async() =>
+            {//to continue on this point until the execution completes
+                flightforAirport = flightApis.getFlightsFromAirport("SYD", 14, 03, 2019);
+
+            });
+
+            while (task.Status != TaskStatus.RanToCompletion)
+            {
+                Console.WriteLine("Thread ID: {0}, Status: {1}", Thread.CurrentThread.ManagedThreadId, task.Status);
+                flightforAirport = flightApis.getFlightsFromAirport("SYD", 14, 03, 2019);
+            }
+            // Items = new ObservableCollection<AirportFlightResponseVM>(flightforAirport.Result);
+            //Items = 
+            return flightforAirport.Result.result;
         }
     }
 }

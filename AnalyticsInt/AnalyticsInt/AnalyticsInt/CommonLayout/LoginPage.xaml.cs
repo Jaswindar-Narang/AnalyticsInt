@@ -27,9 +27,9 @@ namespace AnalyticsInt.CommonLayout
             //var newres= await Task.Run(()=> flightApis.getFlightsFromAirport("SYD", 04, 03, 2019)));
 
         }
-        public async void myAPICALL()
+        public void myAPICALL()
         {
-            var flightforAirport = await flightApis.getFlightsFromAirport("SYD", 14, 03, 2019);
+            var flightforAirport =  flightApis.getFlightsFromAirport("SYD", 14, 03, 2019);
         }
         private void login_img_Clicked(object sender, EventArgs e)
         {

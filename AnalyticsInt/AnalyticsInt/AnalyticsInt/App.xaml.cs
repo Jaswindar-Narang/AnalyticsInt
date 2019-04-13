@@ -12,6 +12,7 @@ namespace AnalyticsInt
         public App()
         {
             InitializeComponent();
+
             NavigationPage nav = new NavigationPage();
             MainPage = new AirportFlights();
             //MainPage = new Subscriptions();

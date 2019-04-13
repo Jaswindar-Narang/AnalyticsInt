@@ -44,13 +44,25 @@ namespace AnalyticsInt.Classes
             {
                 APIResponse<AirportFlightResponseVM> airportFlights = null;
                 AirportFlightResponseVM model = new AirportFlightResponseVM();
-                var result = await APIHendler.GetData(APIUrls.getFlightsArrivalAtAirport(ArrivalAirport, date, month, year));
+              //  var dates = Convert.ToInt32(DateTime.UtcNow.Date);
+               var result = Task.Run(() => APIHendler.GetData(APIUrls.getFlightsArrivalAtAirport(ArrivalAirport, date, month, year))).Result;
+                //var result = await APIHendler.GetData(APIUrls.getFlightsArrivalAtAirport(ArrivalAirport, date, month, year));
                 string jsonString = result[0].ToString();
-                airportFlights = JsonConvert.DeserializeObject<APIResponse<AirportFlightResponseVM>>(jsonString);
-                if (airportFlights.Result.Error != null)
+                var airportob = JsonConvert.DeserializeObject<Object>(jsonString);
+                var parsed = JObject.Parse(airportob.ToString());
+                try
                 {
-                    airportFlights.StatusCode = HttpStatusCode.BadRequest;
-                    airportFlights.ErrorMessage = airportFlights.Result.Error.errorMessage;
+                    airportFlights = (parsed["result"].ToObject<APIResponse<AirportFlightResponseVM>>());
+                }
+                catch (Exception EX)
+                {
+            
+                    var ADFASD = JsonConvert.DeserializeObject<APIResponse<AirportFlightResponseVM>>(jsonString);
+                }
+                if (airportFlights.result.Error != null)
+                {
+                    airportFlights.statusCode = HttpStatusCode.BadRequest;
+                    airportFlights.errorMessage = airportFlights.result.Error.errorMessage;
                 }
                 return airportFlights;
             }
@@ -60,5 +72,6 @@ namespace AnalyticsInt.Classes
                 return null;
             }
         }
+       
     }
 }

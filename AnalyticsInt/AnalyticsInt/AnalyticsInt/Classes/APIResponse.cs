@@ -10,10 +10,10 @@ namespace AnalyticsInt.Classes
 
     public class APIResponse<T>
     {
-        public HttpStatusCode StatusCode { get; set; }
-        public string ErrorMessage { get; set; }
-        public T Result { get; set; }
-        public int? DataSize { get; set; }
+        public HttpStatusCode statusCode { get; set; }
+        public string errorMessage { get; set; }
+        public T result { get; set; }
+        public int? dataSize { get; set; }
 
     //public APIResponse(HttpStatusCode statusCode, string errorMessage, T result, int? dataSize)
     //    {
