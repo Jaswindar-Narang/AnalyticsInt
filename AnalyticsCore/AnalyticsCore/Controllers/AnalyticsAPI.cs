@@ -25,6 +25,7 @@ namespace AnalyticsCore.Controllers
         //{
         //    var res = new string[] { "value1", "value2" };
         //}
+
         [Route("GetFlightsForAirport")]
         [HttpGet]
         public async Task<APIResponse> GetFlightsForAirport(string apiUrl)
@@ -74,7 +75,7 @@ namespace AnalyticsCore.Controllers
 
             using (var client = new HttpClient())
             {
-                apiUrl = "https://api.flightstats.com/flex/schedules/rest/v1/json/to/SYD/arriving/2019/02/23/22?appId=0ff76378&appKey=34e1215925633a6c4c04ecf43961e968";
+                apiUrl = "https://api.flightstats.com/flex/schedules/rest/v1/json/to/SYD/arriving/2019/02/23/22?appId=0ac14e29&appKey=c11f92f67a187ebeee2a47856e2c6e43";
                 // SetupClient(client, "GET", apiUrl);
 
                 //  response = await client.GetAsync(apiUrl).ConfigureAwait(false);
@@ -86,7 +87,10 @@ namespace AnalyticsCore.Controllers
                 {
                     try
                     {
-                       var strResult  = await response1.Content.ReadAsStringAsync();
+                        // original
+                        //var strResult  = await response1.Content.ReadAsStringAsync();
+                        // 
+                        var strResult =   System.IO.File.ReadAllText(@"c:\AirportFlightsResponse.txt");
                         responseModel.StatusCode = System.Net.HttpStatusCode.OK;
                         responseModel.Result = JObject.Parse(strResult);
                         //responseModel.Result = JsonConvert.SerializeObject(strResult,
@@ -104,6 +108,7 @@ namespace AnalyticsCore.Controllers
             }
             return responseModel;
         }
+        
 
 
         // GET api/<controller>/5
