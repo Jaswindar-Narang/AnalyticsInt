@@ -4,16 +4,18 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="AnalyticsInt.CommonLayout.AirportFlights"
              Title="Arriving Flights">
-
-            <ListView x:Name="MyListView"
-             AbsoluteLayout.LayoutBounds="true"
+    
+        <StackLayout Orientation="Vertical" >
+            
+                <ListView VerticalOptions="FillAndExpand" x:Name="MyListView"
+            
             ItemsSource="{Binding scheduledFlights}"
             ItemTapped="Handle_ItemTapped"
             CachingStrategy="RecycleElement">
 
-            <!--Built in Cells-->
+                    <!--Built in Cells-->
 
-        <!--<ListView.GroupHeaderTemplate>
+                    <!--<ListView.GroupHeaderTemplate>
             <DataTemplate>
                 <ViewCell Height="25">
                     <StackLayout VerticalOptions="FillAndExpand"
@@ -23,26 +25,26 @@
                 </ViewCell>
             </DataTemplate>
         </ListView.GroupHeaderTemplate>-->
-        <ListView.ItemTemplate>
-                <DataTemplate>
-                    <ViewCell>
-                        <StackLayout Padding="5" HorizontalOptions="FillAndExpand" Orientation="Horizontal" >
-                            <Image Source="BlueFlight.jpg" ></Image>
-                            <Label  Text="{Binding flightNumber }" FontSize="Micro" TextColor="Green"></Label>
-                            <Label Text="{Binding departureAirportFsCode }" FontSize="Micro" TextColor="Orange"></Label>
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <StackLayout Padding="5" HorizontalOptions="FillAndExpand" Orientation="Horizontal" >
+                                    <Image Source="BlueFlight.jpg" ></Image>
+                                    <Label  Text="{Binding flightNumber }" FontSize="Micro" TextColor="Green"></Label>
+                                    <Label Text="{Binding departureAirportFsCode }" FontSize="Micro" TextColor="Orange"></Label>
 
-                            <Label Text="{Binding arrivalTime,StringFormat='{}{0:hh\\:mm tt}'}" FontSize="Micro" TextColor="Green"></Label>
-                            <Label Text="{Binding arrivalTerminal }" FontSize="Micro" TextColor="Orange"></Label>
+                                    <Label Text="{Binding arrivalTime,StringFormat='{}{0:hh\\:mm tt}'}" FontSize="Micro" TextColor="Green"></Label>
+                                    <Label Text="{Binding arrivalTerminal }" FontSize="Micro" TextColor="Orange"></Label>
 
-                        </StackLayout>
+                                </StackLayout>
 
-                    </ViewCell>
+                            </ViewCell>
 
-                </DataTemplate>
-            </ListView.ItemTemplate>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
 
-            <!--Custom View Cells-->
-            <!--
+                    <!--Custom View Cells-->
+                    <!--
     <ListView.ItemTemplate>
       <DataTemplate>
         <ViewCell>
@@ -56,6 +58,14 @@
       </DataTemplate>
     </ListView.ItemTemplate>
     -->
-        </ListView>
-       
+                </ListView>
+
+                <BoxView  HorizontalOptions="FillAndExpand"  BackgroundColor="Green" >
+           
+                </BoxView>
+        </StackLayout>
+
+
+      
+   
 </ContentPage>

@@ -21,6 +21,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)Classes\APIUrls.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Classes\Error.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Classes\FlightService.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Classes\AppNotification.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Classes\ViewModels\FlightResponseVM\AirportFlightResponseVM.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)CommonLayout\AirportFlights.xaml.cs">
       <DependentUpon>AirportFlights.xaml</DependentUpon>
@@ -32,6 +33,10 @@
     </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)CommonLayout\LoginPage.xaml.cs">
       <DependentUpon>LoginPage.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)CommonLayout\MyHomePage.xaml.cs">
+      <DependentUpon>MyHomePage.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)CommonLayout\Page1.xaml.cs">
@@ -91,5 +96,11 @@
     <Content Include="$(MSBuildThisFileDirectory)AirportFlightsResponse.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)CommonLayout\MyHomePage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
   </ItemGroup>
 </Project>

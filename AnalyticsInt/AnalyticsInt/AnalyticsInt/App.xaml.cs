@@ -1,4 +1,6 @@
 using AnalyticsInt.CommonLayout;
+using Microsoft.AppCenter;
+using Microsoft.AppCenter.Push;
 using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
@@ -12,6 +14,7 @@ namespace AnalyticsInt
         public App()
         {
             InitializeComponent();
+            AppCenter.Start("4e46fd45-e78a-49d3-9617-284bbeaf1006", typeof(Push));
 
             NavigationPage nav = new NavigationPage();
             MainPage = new AirportFlights();
@@ -20,7 +23,8 @@ namespace AnalyticsInt
             {
                
 
-                nav = new NavigationPage(new HomePage());
+
+                nav = new NavigationPage(new AirportFlights());
 
                 nav.BarBackgroundColor = Color.Black;
                 nav.BarTextColor = Color.White;

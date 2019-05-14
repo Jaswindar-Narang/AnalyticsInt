@@ -19,12 +19,24 @@ using AnalyticsCore.Models;
 using AnalyticsInt.Classes;
 using System.Threading.Tasks;
 using System.Threading;
+using Microsoft.AppCenter.Push;
+using Android.Content;
+using Android.Support.V4.App;
+using System.Linq;
 
 namespace AnalyticsInt.Droid
 {
     [Activity(Label = "AnalyticsInt", Icon = "@mipmap/icon", Theme = "@style/MainTheme", MainLauncher = false, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
     public class MainActivity : global::Xamarin.Forms.Platform.Android.FormsAppCompatActivity, IOnClickListener, IOnCompleteListener
     {
+        // Notification- Unique ID for  notification: 
+        static readonly int NOTIFICATION_ID = 1000;
+        static readonly string CHANNEL_ID = "location_notification";
+        internal static readonly string COUNT_KEY = "count";
+
+        // Number of times the button is tapped (starts with first tap):
+        int count = 1;
+
         LoginViewModel LoginVM = new LoginViewModel();
         public static FirebaseApp app;
         FirebaseAuth auth;
@@ -34,38 +46,112 @@ namespace AnalyticsInt.Droid
               .SetApiKey("AIzaSyAW-iAByk1LHuG0Zll3u4NiACVIarH2gdk")
               .Build();
         PayPalManager MainManager;
+        FlightService flightApis = new FlightService();
+
+
+        public AirportFlightResponseVM Items { get; private set; }
+      //  public FlightService flightApis { get; set; }
+
         protected override void OnCreate(Bundle bundle)
         {
             
             TabLayoutResource = Resource.Layout.Tabbar;
             ToolbarResource = Resource.Layout.Toolbar;
             MainManager = new PayPalManager(this);
+
             base.OnCreate(bundle);
 
             global::Xamarin.Forms.Forms.Init(this, bundle);
+          
+            LoadApplication(new App());
             try
             {
 
-            
-            MessagingCenter.Subscribe<AirportFlights, string>(this, "ReadFlightSampleData", (sender, args) =>
-            {
-                //var txtfiles = Assets.Open("AboutAssets.txt");
-               // Items = new AirportFlightResponseVM();
-               var Items = MyAirportFlights();
+                //Push.SetSenderId("241544303205");
+                Items = new AirportFlightResponseVM();
+                //    flightApis = new FlightService();
+               // Items = flightApis.getFlightsFromAirport("SYD", 15, 04, 2019).Result.result;
+
+                MessagingCenter.Subscribe<AirportFlights, string>(this, "ReadFlightSampleData", (sender, args) =>
+                {
+                    //var txtfiles = Assets.Open("AboutAssets.txt");
+                    // Items = new AirportFlightResponseVM();
+                    var Items = MyAirportFlights();
 
 
-            });
+
+                });
+                //CreateNotificationChannel(Items);
+                // Display the "Hello World, Click Me!" button and register its event handler:
+                //NotificationButtonOnClick(Items);
             }
             catch (Exception ex)
             {
 
                 throw;
             }
-            LoadApplication(new App());
-            FlightService flightApis = new FlightService();
+            void CreateNotificationChannel(AirportFlightResponseVM model)
+            {
+                if (Build.VERSION.SdkInt < BuildVersionCodes.O)
+                {
+                    // Notification channels are new in API 26 (and not a part of the
+                    // support library). There is no need to create a notification 
+                    // channel on older versions of Android.
+                    return;
+                }
+
+                var name = model.scheduledFlights[0].arrivalAirportFsCode;
+                var description = model.scheduledFlights[0].flightNumber;
+                var channel = new NotificationChannel(CHANNEL_ID, name, NotificationImportance.Default)
+                {
+                    Description = description
+                };
+
+                var notificationManager = (NotificationManager)GetSystemService(NotificationService);
+                notificationManager.CreateNotificationChannel(channel);
+
+            }
+            void NotificationButtonOnClick(AirportFlightResponseVM model)
+            {
+                // Pass the current button press count value to the next activity:
+                var valuesForActivity = new Bundle();
+                valuesForActivity.PutInt(COUNT_KEY, count);
+
+                // When the user clicks the notification, SecondActivity will start up.
+                var resultIntent = new Intent(this, typeof(AppNotification));
+
+                // Pass some values to SecondActivity:
+                resultIntent.PutExtras(valuesForActivity);
+
+                // Construct a back stack for cross-task navigation:
+                var stackBuilder = Android.Support.V4.App.TaskStackBuilder.Create(this);
+                //stackBuilder.AddParentStack(Class.FromType(typeof(AppNotification)));
+                stackBuilder.AddNextIntent(resultIntent);
+
+                // Create the PendingIntent with the back stack:            
+                var resultPendingIntent = stackBuilder.GetPendingIntent(0, (int)PendingIntentFlags.UpdateCurrent);
+                for (int i = 0; i <= 5; i++)
+                {
+                    // Build the notification:
+                    
+                    var builder = new NotificationCompat.Builder(this, CHANNEL_ID)
+                                  .SetAutoCancel(true) // Dismiss the notification from the notification area when the user clicks on it
+                                  .SetContentIntent(resultPendingIntent) // Start up this activity when the user clicks the intent.
+                                  .SetContentTitle($" {model.scheduledFlights[i].arrivalTime.Hour.ToString()} : {model.scheduledFlights[0].arrivalTime.Minute.ToString()}") // Set the title
+                                  .SetNumber(count) // Display the count in the Content Info
+                                  .SetSmallIcon(Resource.Drawable.flightpic) // This is the icon to display
+                                  .SetContentText($"{model.appendix.airports.Where(o=>o.cityCode== model.scheduledFlights[i].departureAirportFsCode).FirstOrDefault().city.ToString()} At Terminal {model.scheduledFlights[0].arrivalTerminal}"); // the message to display.
+
+                    // Finally, publish the notification:
+
+                    var notificationManager = NotificationManagerCompat.From(this);
+                    notificationManager.Notify(NOTIFICATION_ID+i, builder.Build());
+                   
+                }
+                // Increment the button press count:
+                count++;
+            }
             
-
-
             MessagingCenter.Subscribe<LoginViewModel, string>(this, "Login", (sender, args) =>
             {
                 LoginVM = new LoginViewModel();

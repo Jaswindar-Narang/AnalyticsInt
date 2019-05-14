@@ -9,7 +9,7 @@ namespace AnalyticsCore.Models
     public class AirportFlightResponseVM
     {
         public Request request { get; set; }
-        public List<ScheduledFlight> scheduledFlights { get; set; }
+        public List<ScheduledFlight> scheduledFlights = new List<ScheduledFlight>();
         public Appendix appendix { get; set; }
         public Error Error { get; set; }
     }
