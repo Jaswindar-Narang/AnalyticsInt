@@ -129,7 +129,5 @@ namespace AnalyticsCore.Models
             public List<Airport2> airports { get; set; }
             public List<Equipment> equipments { get; set; }
         }
-
-       
     }
 

@@ -30,13 +30,10 @@ namespace AnalyticsInt.Classes
         {
             try
             {
-                // HttpClient client = new HttpClient();
                 Uri uristring = new Uri(Str_Uri);
-                //client.DefaultRequestHeaders.Add("userguid", Helpers.Settings.UserGuid);
                 StringContent stringcontent = new StringContent(Str_Param.Trim(), UnicodeEncoding.UTF8, "application/json");
                 HttpResponseMessage response = await client.PostAsync(uristring, stringcontent);
                 var content = await response.Content.ReadAsStringAsync();
-                // var rawjson = new StreamReader(content).ReadToEnd();
                 return await Task.Run(() => new List<string>() { content.ToString() });
             }
             catch (Exception ex)

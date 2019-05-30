@@ -16,6 +16,7 @@ namespace AnalyticsInt.CommonLayout
 	{
         NavigationPage nav = new NavigationPage();
         FlightService flightApis = new FlightService();
+
 		public LoginPage ()
 		{
 			InitializeComponent ();
@@ -27,10 +28,12 @@ namespace AnalyticsInt.CommonLayout
             //var newres= await Task.Run(()=> flightApis.getFlightsFromAirport("SYD", 04, 03, 2019)));
 
         }
+
         public void myAPICALL()
         {
             var flightforAirport =  flightApis.getFlightsFromAirport("SYD", 14, 03, 2019);
         }
+
         private void login_img_Clicked(object sender, EventArgs e)
         {
             LoginViewModel LoginVM = new LoginViewModel();
@@ -49,6 +52,7 @@ namespace AnalyticsInt.CommonLayout
 
             //});
         }
+
         private void SignUp_img_Clicked(object sender, EventArgs e)
         {
             Entities.ViewModels.LoginViewModel LoginVM = new Entities.ViewModels.LoginViewModel();

@@ -54,32 +54,23 @@ namespace AnalyticsInt.Droid
 
         protected override void OnCreate(Bundle bundle)
         {
-            
             TabLayoutResource = Resource.Layout.Tabbar;
             ToolbarResource = Resource.Layout.Toolbar;
             MainManager = new PayPalManager(this);
-
             base.OnCreate(bundle);
-
             global::Xamarin.Forms.Forms.Init(this, bundle);
-          
             LoadApplication(new App());
             try
             {
-
                 //Push.SetSenderId("241544303205");
                 Items = new AirportFlightResponseVM();
                 //    flightApis = new FlightService();
                // Items = flightApis.getFlightsFromAirport("SYD", 15, 04, 2019).Result.result;
-
                 MessagingCenter.Subscribe<AirportFlights, string>(this, "ReadFlightSampleData", (sender, args) =>
                 {
                     //var txtfiles = Assets.Open("AboutAssets.txt");
                     // Items = new AirportFlightResponseVM();
                     var Items = MyAirportFlights();
-
-
-
                 });
                 //CreateNotificationChannel(Items);
                 // Display the "Hello World, Click Me!" button and register its event handler:
@@ -87,7 +78,6 @@ namespace AnalyticsInt.Droid
             }
             catch (Exception ex)
             {
-
                 throw;
             }
             void CreateNotificationChannel(AirportFlightResponseVM model)
@@ -133,7 +123,6 @@ namespace AnalyticsInt.Droid
                 for (int i = 0; i <= 5; i++)
                 {
                     // Build the notification:
-                    
                     var builder = new NotificationCompat.Builder(this, CHANNEL_ID)
                                   .SetAutoCancel(true) // Dismiss the notification from the notification area when the user clicks on it
                                   .SetContentIntent(resultPendingIntent) // Start up this activity when the user clicks the intent.
@@ -143,10 +132,8 @@ namespace AnalyticsInt.Droid
                                   .SetContentText($"{model.appendix.airports.Where(o=>o.cityCode== model.scheduledFlights[i].departureAirportFsCode).FirstOrDefault().city.ToString()} At Terminal {model.scheduledFlights[0].arrivalTerminal}"); // the message to display.
 
                     // Finally, publish the notification:
-
                     var notificationManager = NotificationManagerCompat.From(this);
                     notificationManager.Notify(NOTIFICATION_ID+i, builder.Build());
-                   
                 }
                 // Increment the button press count:
                 count++;
@@ -173,19 +160,11 @@ namespace AnalyticsInt.Droid
             MessagingCenter.Subscribe<HomePage, string>(this, "PaymentPageRequest", (sender, args) =>
             {
                 MainManager.BuySomething();
-               
-
             });
             MessagingCenter.Subscribe<Subscriptions, string>(this, "PaymentPageRequest", (sender, args) =>
             {
                 MainManager.BuySomething();
-
-
             });
-
-
-
-
         }
         protected override void OnActivityResult(int requestCode, Result resultCode, Android.Content.Intent data)
         {

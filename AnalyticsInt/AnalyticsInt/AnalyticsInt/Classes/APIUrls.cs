@@ -6,7 +6,6 @@ namespace AnalyticsInt.Classes
 {
    public class APIUrls
     {
-       // http://192.168.1.5:8080/
         #region staging env
 
         public static string envurl = "http://192.168.0.102:8081/";

@@ -17,7 +17,6 @@ namespace AnalyticsInt.Classes
         protected override void OnCreate(Bundle bundle)
         {
             base.OnCreate(bundle);
-
             // Get the count value passed to us from MainActivity:
             var count = Intent.Extras.GetInt(MainActivity.COUNT_KEY, -1);
 

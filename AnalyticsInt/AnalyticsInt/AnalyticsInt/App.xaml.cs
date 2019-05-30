@@ -6,11 +6,11 @@ using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using static AnalyticsInt.Entities.ViewModels;
 
-[assembly: XamlCompilation (XamlCompilationOptions.Compile)]
+[assembly: XamlCompilation(XamlCompilationOptions.Compile)]
 namespace AnalyticsInt
 {
-	public partial class App : Application
-	{
+    public partial class App : Application
+    {
         public App()
         {
             InitializeComponent();
@@ -19,29 +19,22 @@ namespace AnalyticsInt
             NavigationPage nav = new NavigationPage();
             MainPage = new AirportFlights();
             //MainPage = new Subscriptions();
-                       MessagingCenter.Subscribe<LoginViewModel, string>(this, "LoginSuccess", (loginModel, args) =>
-            {
-               
+            MessagingCenter.Subscribe<LoginViewModel, string>(this, "LoginSuccess", (loginModel, args) =>
+         {
 
-
-                nav = new NavigationPage(new AirportFlights());
-
-                nav.BarBackgroundColor = Color.Black;
-                nav.BarTextColor = Color.White;
-
-                MainPage = nav;
-
-            });
+                 nav = new NavigationPage(new AirportFlights());
+                 nav.BarBackgroundColor = Color.Black;
+                 nav.BarTextColor = Color.White;
+            
+                 MainPage = nav;
+            
+          });
 
             MessagingCenter.Subscribe<HomePage, string>(this, "Subscriptions", (sender, args) =>
             {
-               
-
                 nav = new NavigationPage(new Subscriptions());
-
                 nav.BarBackgroundColor = Color.Black;
                 nav.BarTextColor = Color.White;
-
                 MainPage = nav;
             });
             //MessagingCenter.Subscribe<HomePage, string>(this, "PaymentPageRequest", (loginModel, args) =>
@@ -55,21 +48,21 @@ namespace AnalyticsInt
             //});
         }
 
-       
 
-        protected override void OnStart ()
-		{
-			// Handle when your app starts
-		}
 
-		protected override void OnSleep ()
-		{
-			// Handle when your app sleeps
-		}
+        protected override void OnStart()
+        {
+            // Handle when your app starts
+        }
 
-		protected override void OnResume ()
-		{
-			// Handle when your app resumes
-		}
-	}
+        protected override void OnSleep()
+        {
+            // Handle when your app sleeps
+        }
+
+        protected override void OnResume()
+        {
+            // Handle when your app resumes
+        }
+    }
 }
