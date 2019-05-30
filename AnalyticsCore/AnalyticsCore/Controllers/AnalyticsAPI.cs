@@ -32,16 +32,12 @@ namespace AnalyticsCore.Controllers
         {
             var req = Request;
             APIResponse response = null;
-
             using (var client = new HttpClient())
             {
                 apiUrl = "https://api.flightstats.com/flex/schedules/rest/v1/json/to/SYD/arriving/2019/02/23/22?appId=0ff76378&appKey=34e1215925633a6c4c04ecf43961e968";
                 // SetupClient(client, "GET", apiUrl);
-
                 //  response = await client.GetAsync(apiUrl).ConfigureAwait(false);
-
                 // response.EnsureSuccessStatusCode();
-               
                 var response1 = client.GetAsync(apiUrl).Result;  // Blocking call!  
                 if (response1 != null)
                 {
