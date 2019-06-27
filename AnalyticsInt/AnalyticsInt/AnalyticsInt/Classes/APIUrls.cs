@@ -8,7 +8,7 @@ namespace AnalyticsInt.Classes
     {
         #region staging env
 
-        public static string envurl = "http://192.168.0.102:8081/";
+        public static string envurl = "http://192.168.42.113/";
 
         #endregion
 

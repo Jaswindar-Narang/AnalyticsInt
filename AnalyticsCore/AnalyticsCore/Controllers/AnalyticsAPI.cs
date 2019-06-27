@@ -103,44 +103,7 @@ namespace AnalyticsCore.Controllers
         [HttpGet]
         public async Task<ResponseModel> GetAllFlightsForAirport(string apiUrl)
         {
-            ResponseModel responseModel = new ResponseModel();
-               var req = Request;
-            string response = null;
-
-            using (var client = new HttpClient())
-            {
-                apiUrl = "https://api.flightstats.com/flex/schedules/rest/v1/json/to/SYD/arriving/2019/06/22/22?appId=" + appid + "&appKey=" + appKey;
-                // SetupClient(client, "GET", apiUrl);
-
-                //  response = await client.GetAsync(apiUrl).ConfigureAwait(false);
-
-                // response.EnsureSuccessStatusCode();
-
-                var response1 = client.GetAsync(apiUrl).Result;  // Blocking call!  
-                if (response1 != null)
-                {
-                    try
-                    {
-                        // original
-                        var strResult  = await response1.Content.ReadAsStringAsync();
-                        // 
-                        //var strResult =   System.IO.File.ReadAllText(@"c:\AirportFlightsResponse.txt");
-                        responseModel.StatusCode = System.Net.HttpStatusCode.OK;
-                        responseModel.Result = JObject.Parse(strResult);
-                        //responseModel.Result = JsonConvert.SerializeObject(strResult,
-                        //            new JsonSerializerSettings()).ToList();
-
-                    }
-                    catch (Exception ex)
-                    {
-                        responseModel.StatusCode = System.Net.HttpStatusCode.NoContent;
-                        responseModel.ErrorMessage = ex.Message.ToString();
-                        responseModel.Result = null;
-                    }
-                }
-
-            }
-            return responseModel;
+                       return  GlobalProperties.globalResponseModel;
         }
         
 

@@ -37,7 +37,7 @@ namespace AnalyticsInt.CommonLayout
             //MessagingCenter.Send(this, "testData", "success");
 
           //  var IteTms =  APIUrls.getFlightsArrivalAtAirport("SYD", 12, 03, 2019);
-             Items = flightApis.getFlightsFromAirport("SYD", 12, 03, 2019).Result.result;
+             Items = flightApis.getFlightsFromAirport("SYD", 18, 06, 2019).Result.result;
                 // var RESULT = JObject.Parse(Items);
                 //  var result = JsonConvert.DeserializeObject<AirportFlightResponseVM>(Items.ToString());
                 //var Ite2ms = new ObservableCollection<string>

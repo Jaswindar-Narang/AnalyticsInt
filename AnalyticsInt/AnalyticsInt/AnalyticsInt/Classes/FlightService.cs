@@ -52,7 +52,12 @@ namespace AnalyticsInt.Classes
                 var parsed = JObject.Parse(airportob.ToString());
                 try
                 {
-                    airportFlights = (parsed["result"].ToObject<APIResponse<AirportFlightResponseVM>>());
+                    var testobj = parsed["result"];
+                    // airportFlights = (parsed["result"].ToObject<APIResponse<AirportFlightResponseVM>>());
+                    airportFlights = JsonConvert.DeserializeObject<APIResponse<AirportFlightResponseVM>>(jsonString);
+                    var newResult = airportFlights;
+                    airportFlights.result.scheduledFlights = newResult.result.scheduledFlights.FindAll(o => o.isCodeshare == false);
+
                 }
                 catch (Exception EX)
                 {
@@ -63,6 +68,7 @@ namespace AnalyticsInt.Classes
                 {
                     airportFlights.statusCode = HttpStatusCode.BadRequest;
                     airportFlights.errorMessage = airportFlights.result.Error.errorMessage;
+                   
                 }
                 return airportFlights;
             }
