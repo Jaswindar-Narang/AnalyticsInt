@@ -18,6 +18,8 @@ namespace AnalyticsCore.Controllers
     [EnableCors("*")]
     public class AnalyticsAPI : Controller
     {
+        string appid = "d60656ee";
+        string appKey = "a283cf89995ace4fbf03d5cee06d6dcc";
         // GET: api/<controller>
         //[Route("GetFlightsForAirport")]
         //[HttpGet]
@@ -34,7 +36,7 @@ namespace AnalyticsCore.Controllers
             APIResponse response = null;
             using (var client = new HttpClient())
             {
-                apiUrl = "https://api.flightstats.com/flex/schedules/rest/v1/json/to/SYD/arriving/2019/02/23/22?appId=0ff76378&appKey=34e1215925633a6c4c04ecf43961e968";
+                apiUrl = "https://api.flightstats.com/flex/schedules/rest/v1/json/to/SYD/arriving/2019/06/14/22?appId=" + appid + "&appKey=" + appKey;
                 // SetupClient(client, "GET", apiUrl);
                 //  response = await client.GetAsync(apiUrl).ConfigureAwait(false);
                 // response.EnsureSuccessStatusCode();
@@ -61,6 +63,42 @@ namespace AnalyticsCore.Controllers
             return response;
         }
 
+        [Route("GetFlightsForAirportSwagger")]
+        [HttpGet]
+        public RootObject GetFlightsForAirportSwagger(string apiUrl)
+        {
+            RootObject deserialized = new RootObject() ;
+            var req = Request;
+            APIResponse response = null;
+            using (var client = new HttpClient())
+            {
+                apiUrl = "https://api.flightstats.com/flex/schedules/rest/v1/json/to/SYD/arriving/2019/06/14/22?appId="+ appid + "&appKey="+ appKey;
+                // SetupClient(client, "GET", apiUrl);
+                //  response = await client.GetAsync(apiUrl).ConfigureAwait(false);
+                // response.EnsureSuccessStatusCode();
+                var response1 = client.GetAsync(apiUrl).Result;  // Blocking call!  
+                if (response1 != null)
+                {
+                    var customerJsonString =  response1.Content.ReadAsStringAsync();
+                    Console.WriteLine("Your response data is: " + customerJsonString);
+
+                    // Deserialise the data (include the Newtonsoft JSON Nuget package if you don't already have it)
+                    deserialized = JsonConvert.DeserializeObject<RootObject>(custome‌​rJsonString.Result);
+                    response = new APIResponse(true, "Sucess", deserialized);
+                }
+
+                //await response.Content.ReadAsStringAsync().ContinueWith((Task<string> x) =>
+                //{
+                //    if (x.IsFaulted)
+                //        throw x.Exception;
+                //    //result.Content = x.Result;
+                //    result.Content = new StringContent(x.Result);
+                //    //result = JsonConvert.DeserializeObject<AirportFlightResponseVM>(x.Result);
+                //});
+            }
+            return deserialized;
+        }
+
         [Route("GetAllFlightsForAirport")]
         [HttpGet]
         public async Task<ResponseModel> GetAllFlightsForAirport(string apiUrl)
@@ -71,7 +109,7 @@ namespace AnalyticsCore.Controllers
 
             using (var client = new HttpClient())
             {
-                apiUrl = "https://api.flightstats.com/flex/schedules/rest/v1/json/to/SYD/arriving/2019/02/23/22?appId=0ac14e29&appKey=c11f92f67a187ebeee2a47856e2c6e43";
+                apiUrl = "https://api.flightstats.com/flex/schedules/rest/v1/json/to/SYD/arriving/2019/06/22/22?appId=" + appid + "&appKey=" + appKey;
                 // SetupClient(client, "GET", apiUrl);
 
                 //  response = await client.GetAsync(apiUrl).ConfigureAwait(false);
@@ -84,9 +122,9 @@ namespace AnalyticsCore.Controllers
                     try
                     {
                         // original
-                        //var strResult  = await response1.Content.ReadAsStringAsync();
+                        var strResult  = await response1.Content.ReadAsStringAsync();
                         // 
-                        var strResult =   System.IO.File.ReadAllText(@"c:\AirportFlightsResponse.txt");
+                        //var strResult =   System.IO.File.ReadAllText(@"c:\AirportFlightsResponse.txt");
                         responseModel.StatusCode = System.Net.HttpStatusCode.OK;
                         responseModel.Result = JObject.Parse(strResult);
                         //responseModel.Result = JsonConvert.SerializeObject(strResult,
