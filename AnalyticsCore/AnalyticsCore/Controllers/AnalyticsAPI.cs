@@ -18,8 +18,6 @@ namespace AnalyticsCore.Controllers
     [EnableCors("*")]
     public class AnalyticsAPI : Controller
     {
-        string appid = "d60656ee";
-        string appKey = "a283cf89995ace4fbf03d5cee06d6dcc";
         // GET: api/<controller>
         //[Route("GetFlightsForAirport")]
         //[HttpGet]
@@ -36,11 +34,11 @@ namespace AnalyticsCore.Controllers
             APIResponse response = null;
             using (var client = new HttpClient())
             {
-                apiUrl = "https://api.flightstats.com/flex/schedules/rest/v1/json/to/SYD/arriving/2019/06/14/22?appId=" + appid + "&appKey=" + appKey;
+               // apiUrl = "https://api.flightstats.com/flex/schedules/rest/v1/json/to/SYD/arriving/2019/06/14/22?appId=" + appid + "&appKey=" + appKey;
                 // SetupClient(client, "GET", apiUrl);
                 //  response = await client.GetAsync(apiUrl).ConfigureAwait(false);
                 // response.EnsureSuccessStatusCode();
-                var response1 = client.GetAsync(apiUrl).Result;  // Blocking call!  
+                var response1 = client.GetAsync(GlobalProperties.apiUrl).Result;  // Blocking call!  
                 if (response1 != null)
                 {
                     var customerJsonString = await response1.Content.ReadAsStringAsync();
@@ -70,13 +68,21 @@ namespace AnalyticsCore.Controllers
             RootObject deserialized = new RootObject() ;
             var req = Request;
             APIResponse response = null;
+           // string arrivalYear = DateTime.Now.Year.ToString();
+           // string arrivalDate = DateTime.Now.Date.Day.ToString();
+           // string arrivalMonth = DateTime.Now.Month.ToString().Length==1?"0"+DateTime.Now.Month.ToString(): DateTime.Now.Month.ToString();
+            
+            
+           // string arrivalCity = usercity;
+            //string arrivalAirport = usercityAirportCode;
+             
             using (var client = new HttpClient())
             {
-                apiUrl = "https://api.flightstats.com/flex/schedules/rest/v1/json/to/SYD/arriving/2019/06/14/22?appId="+ appid + "&appKey="+ appKey;
+               // apiUrl = "https://api.flightstats.com/flex/schedules/rest/v1/json/to/SYD/arriving/"+GlobalProperties.arrivalYear +"/"+ GlobalProperties.arrivalMonth + "/"+ GlobalProperties.arrivalDate + "/22?appId="+ appid + "&appKey="+ appKey;
                 // SetupClient(client, "GET", apiUrl);
                 //  response = await client.GetAsync(apiUrl).ConfigureAwait(false);
                 // response.EnsureSuccessStatusCode();
-                var response1 = client.GetAsync(apiUrl).Result;  // Blocking call!  
+                var response1 = client.GetAsync(GlobalProperties.apiUrl).Result;  // Blocking call!  
                 if (response1 != null)
                 {
                     var customerJsonString =  response1.Content.ReadAsStringAsync();

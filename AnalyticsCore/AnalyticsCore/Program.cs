@@ -26,7 +26,7 @@ namespace AnalyticsCore
             // For Interval in Minutes 
             // This Scheduler will start at 22:00(set to datetime.now) and call after every 1 Minutes
             // IntervalInSeconds(start_hour, start_minute, minutes)
-            FlightAPIScheduler.IntervalInMinutes(DateTime.Now.Hour, DateTime.Now.Minute, 1,
+            FlightAPIScheduler.IntervalInMinutes(DateTime.Now.Hour, DateTime.Now.Minute, 15,
             async () => {
 
               var x = await GetAllFlightsForAirport(apiUrl);
@@ -66,14 +66,14 @@ namespace AnalyticsCore
 
             using (var client = new HttpClient())
             {
-                apiUrl = "https://api.flightstats.com/flex/schedules/rest/v1/json/to/SYD/arriving/2019/"+month+"/"+date+"/22?appId=" + appid + "&appKey=" + appKey;
+                //apiUrl = "https://api.flightstats.com/flex/schedules/rest/v1/json/to/SYD/arriving/"+ GlobalProperties.arrivalYear+ "/"+ GlobalProperties .arrivalMonth+ "/"+ GlobalProperties.arrivalDate+ "/22?appId=" + appid + "&appKey=" + appKey;
                 // SetupClient(client, "GET", apiUrl);
 
                 //  response = await client.GetAsync(apiUrl).ConfigureAwait(false);
 
                 // response.EnsureSuccessStatusCode();
 
-                var response1 = client.GetAsync(apiUrl).Result;  // Blocking call!  
+                var response1 = client.GetAsync(GlobalProperties.apiUrl).Result;  // Blocking call!  
                 if (response1 != null)
                 {
                     try
