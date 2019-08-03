@@ -16,12 +16,12 @@ namespace AnalyticsCore
 {
     public class Program
     {
-        public static readonly string appid = "d60656ee";
-        public static readonly string appKey = "a283cf89995ace4fbf03d5cee06d6dcc";
+        //public static readonly string appid = "d60656ee";
+        //public static readonly string appKey = "a283cf89995ace4fbf03d5cee06d6dcc";
         public static void Main(string[] args)
         {
            
-            string  apiUrl = "https://api.flightstats.com/flex/schedules/rest/v1/json/to/SYD/arriving/2019/06/22/22?appId=" + appid + "&appKey=" + appKey;
+           // string  apiUrl = "https://api.flightstats.com/flex/schedules/rest/v1/json/to/SYD/arriving/2019/06/22/22?appId=" + appid + "&appKey=" + appKey;
 
             // For Interval in Minutes 
             // This Scheduler will start at 22:00(set to datetime.now) and call after every 1 Minutes
@@ -29,7 +29,7 @@ namespace AnalyticsCore
             FlightAPIScheduler.IntervalInMinutes(DateTime.Now.Hour, DateTime.Now.Minute, 15,
             async () => {
 
-              var x = await GetAllFlightsForAirport(apiUrl);
+              var x = await GetAllFlightsForAirport(GlobalProperties.apiUrl);
                 System.Diagnostics.Debug.WriteLine("//here write the code that you want to schedule");
             });
             BuildWebHost(args).Run();
@@ -56,8 +56,8 @@ namespace AnalyticsCore
                 }
                 
                 //need to update 30+ days and days on the basis of months
-                string month = "0"+DateTime.Now.Month.ToString();
-            string date = (DateTime.Now.Day+1).ToString();
+            //    string month = "0"+DateTime.Now.Month.ToString();
+            //string date = (DateTime.Now.Day+1).ToString();
 
             
             ResponseModel responseModel = new ResponseModel();
