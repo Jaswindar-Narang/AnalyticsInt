@@ -61,9 +61,11 @@ namespace AnalyticsCore.Controllers
             return response;
         }
 
-        [Route("GetFlightsForAirportSwagger")]
+        [Route("GetAllFlightsForAirport")]
         [HttpGet]
-        public RootObject GetFlightsForAirportSwagger(string apiUrl)
+       
+
+        public async Task<ResponseModel> GetAllFlightsForAirport(string apiUrl)
         {
             RootObject deserialized = new RootObject() ;
             var req = Request;
@@ -91,6 +93,8 @@ namespace AnalyticsCore.Controllers
                     // Deserialise the data (include the Newtonsoft JSON Nuget package if you don't already have it)
                     deserialized = JsonConvert.DeserializeObject<RootObject>(custome‌​rJsonString.Result);
                     response = new APIResponse(true, "Sucess", deserialized);
+                    GlobalProperties.globalResponseModel.StatusCode = System.Net.HttpStatusCode.OK;
+                    GlobalProperties.globalResponseModel.Result = JObject.Parse(custome‌​rJsonString.Result);
                 }
 
                 //await response.Content.ReadAsStringAsync().ContinueWith((Task<string> x) =>
@@ -102,15 +106,17 @@ namespace AnalyticsCore.Controllers
                 //    //result = JsonConvert.DeserializeObject<AirportFlightResponseVM>(x.Result);
                 //});
             }
-            return deserialized;
+            //  return deserialized;
+           
+            return GlobalProperties.globalResponseModel;
         }
 
-        [Route("GetAllFlightsForAirport")]
-        [HttpGet]
-        public async Task<ResponseModel> GetAllFlightsForAirport(string apiUrl)
-        {
-                       return  GlobalProperties.globalResponseModel;
-        }
+        //[Route("GetAllFlightsForAirport")]
+        //[HttpGet]
+        //public async Task<ResponseModel> GetAllFlightsForAirport(string apiUrl)
+        //{
+        //               return  GlobalProperties.globalResponseModel;
+        //}
         
 
 
